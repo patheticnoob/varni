@@ -410,10 +410,6 @@ body {
   top: -210px;
   left: 345px;
 }
-.switch10-1,
-.switch10-3 {
-
-}
 
 
 
@@ -594,7 +590,7 @@ body {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .disabled {

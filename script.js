@@ -908,19 +908,19 @@ $(document).ready(function () {
 
 
       if ($(this).attr("title") == "switch6-fan2") {
-        if (boxSize >= 6) {
+        if (boxSize >= 8) {
           if (mod == 12) {
-            if (boxSize > 6 && 6 >= box1Capacity + 6) {
+            if (boxSize > 8 && 8 >= box1Capacity + 8) {
               switch6fan2box1(
-                6,
+                8,
                 ".sub-module-th",
                 box1lis,
                 "switch6fan2",
                 "6 Switch + 2 fan"
               );
-            } else if (6 >= box2Capacity + 6) {
+            } else if (8 >= box2Capacity + 8) {
               switch6fan2box2(
-                6,
+                8,
                 ".sub-module-fi",
                 box2lis,
                 "switch6fan2",
@@ -931,15 +931,15 @@ $(document).ready(function () {
             }
           } else {
             // box2modAll(6, "switch6-fan1", "6 Switch + 1 fan");
-            boxSize -= 6;
+            boxSize -= 8;
             Switch6fan2(n);
-            customerRequirement["sub-element-" + n] = 6;
+            customerRequirement["sub-element-" + n] = 8;
             n++;
             allData["Accessories-" + obj] = "6 Switch + 2 Fan";
             obj++;
           }
         } else {
-          myfunction("Adding 6 Module item is not possible!");
+          myfunction("Adding 8 Module item is not possible!");
         }
       }
     } else {
@@ -2098,8 +2098,6 @@ function switch6fan1box2(bsize, mod12Name, boxlis, addcls, dataName) {
   obj++;
 }
 
-// ! ============================================= ! //
-
 function Switch6fan2(n) {
   const node = document.createElement("div");
   node.classList.add("sub-element-" + n);
@@ -2187,7 +2185,6 @@ function switch6fan2box2(bsize, mod12Name, boxlis, addcls, dataName) {
   allData["Accessories-" + obj] = dataName;
   obj++;
 }
-// ! ============================================= ! //
 
 function allowDrop(ev) {
   ev.preventDefault();
