@@ -1316,3 +1316,55 @@ hr {
   position: relative;
   align-items: center;
 }
+
+
+.switch6fan2{
+  display: grid;
+  align-items: center;
+  grid-template-areas: 
+  "s1 . s2 s4 s6 . s8"
+  "s1 f1 s3 s5 s7 f2 s8";
+  width: 432px;
+  height: 146px;
+  position: relative;
+}
+
+.switch6fan2-1{
+  grid-area: s1;
+}
+
+.switch6fan2-2{
+  grid-area: f1;
+}
+
+.switch6fan2-3{
+  grid-area: s2;
+}
+
+.switch6fan2-4{
+  grid-area: s3;
+}
+
+.switch6fan2-5{
+  grid-area: s4;
+}
+
+.switch6fan2-6{
+  grid-area: s5;
+}
+
+.switch6fan2-7{
+  grid-area: s6;
+}
+
+.switch6fan2-8{
+  grid-area: s7;
+}
+
+.switch6fan2-9{
+  grid-area: f2;
+}
+
+.switch6fan2-10{
+  grid-area: s8;
+}
