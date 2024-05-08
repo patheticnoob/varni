@@ -1364,3 +1364,74 @@ hr {
 .switch6fan2-10{
   grid-area: s8;
 }
+
+
+
+.switch4fan2{
+  display: grid;
+  align-items: center;
+  grid-template-areas: 
+  "s1 s2 s3 s5 s6"
+  "s1 f1 s4 f2 s6";
+  width: 432px;
+  height: 146px;
+  position: relative;
+  padding-inline: 20px;
+}
+
+.switch4fan2-1{
+  grid-area: s1;
+}
+
+.switch4fan2-2{
+  grid-area: f1;
+}
+
+.switch4fan2-3{
+  grid-area: s2;
+}
+
+.switch4fan2-4{
+  grid-area: s3;
+}
+
+.switch4fan2-5{
+  grid-area: s4;
+}
+
+.switch4fan2-6{
+  grid-area: s5;
+}
+
+.switch4fan2-7{
+  grid-area: f2;
+}
+
+.switch4fan2-8{
+  grid-area: s6;
+}
+
+
+/* Switch 4 fan 2 disable */
+li.rmenu-item-icon[title="switch4-fan2"]{
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+li.rmenu-item-icon[title="switch4-fan2"]::after{
+  z-index: 2;
+  content: "COMING SOON";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffffa6;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  color: red;
+  font-size: 10px;
+  font-weight: 600;
+}

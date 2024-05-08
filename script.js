@@ -869,7 +869,43 @@ $(document).ready(function () {
       }
 
 
-      
+      if ($(this).attr("title") == "switch4-fan2") {
+        if (boxSize >= 6) {
+          if (mod == 12) {
+            if (boxSize > 6 && 6 >= box1Capacity + 6) {
+              switch4fan2box1(
+                6,
+                ".sub-module-th",
+                box1lis,
+                "switch4fan2",
+                "4 Switch + 2 fan"
+              );
+            } else if (6 >= box2Capacity + 6) {
+              switch4fan2box2(
+                6,
+                ".sub-module-fi",
+                box2lis,
+                "switch4fan2",
+                "4 Switch + 2 fan"
+              );
+            } else {
+              myfunction("No Space availabe!");
+            }
+          } else {
+            // box2modAll(6, "switch6-fan1", "6 Switch + 1 fan");
+            boxSize -= 6;
+            Switch4fan2(n);
+            customerRequirement["sub-element-" + n] = 6;
+            n++;
+            allData["Accessories-" + obj] = "6 Switch + 1 Fan";
+            obj++;
+          }
+        } else {
+          myfunction("Adding 6 Module item is not possible!");
+        }
+      }
+
+
       if ($(this).attr("title") == "switch6-fan1") {
         if (boxSize >= 6) {
           if (mod == 12) {
@@ -1351,8 +1387,8 @@ $(document).ready(function () {
     $("div.sub-element-" + a[0] + ">div.sw-ele-" + a[1]).html("");
     $("div.sub-element-" + a[0] + ">div.sw-ele-" + a[1]).html(
       '<button type="button" class="closetwo" title="' +
-        a +
-        '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"/></svg></button>'
+      a +
+      '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"/></svg></button>'
     );
     $(".closetwo").addClass("show");
     const droppableElementData = $(
@@ -1381,8 +1417,8 @@ $(document).ready(function () {
     $("div.sub-element-" + a[0] + ">div.sw-ele-" + a[1]).html("");
     $("div.sub-element-" + a[0] + ">div.sw-ele-" + a[1]).html(
       '<button type="button" class="closethree" title="' +
-        a +
-        '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"/></svg></button>'
+      a +
+      '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"/></svg></button>'
     );
     $(".closethree").addClass("show");
     $("div.sub-element-" + a[0] + ">div.sw-ele-" + a[1]).removeClass(
@@ -1408,7 +1444,7 @@ $(document).ready(function () {
     }
   });
 
-   $(".rmenu-item-frame").click(function () {
+  $(".rmenu-item-frame").click(function () {
     $(".module").removeClass("module-fsblack");
     $(".module").removeClass("module-fgold");
     $(".module").removeClass("module-fgray");
@@ -1480,20 +1516,20 @@ $(document).ready(function () {
 function closebtn(p) {
   $(".sub-element-" + p).append(
     '<button type="button" class="close" title="' +
-      "ele" +
-      p +
-      '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"/></svg></button>'
+    "ele" +
+    p +
+    '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"/></svg></button>'
   );
 }
 function closetwo(n, m, closeClass) {
   $("div.sub-element-" + n + ">div.sw-ele-" + m).append(
     '<button type="button" class=" ' +
-      closeClass +
-      '"title="' +
-      n +
-      "," +
-      m +
-      '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"/></svg></button>'
+    closeClass +
+    '"title="' +
+    n +
+    "," +
+    m +
+    '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"/></svg></button>'
   );
 }
 function getObjectValue(obj, key) {
@@ -2016,6 +2052,76 @@ function switch4fan1box2(bsize, mod12Name, boxlis, addcls, dataName) {
   obj++;
 }
 
+function Switch4fan2(n) {
+  const node = document.createElement("div");
+  node.classList.add("sub-element-" + n);
+  $(".sub-module").append(node);
+  node.classList.add("switch4fan2");
+  $(".sub-element-" + n).html(
+    '<div class="fan switch4fan2-1 sw-ele-1 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div><div class="switch4fan2-2 sw-ele-2 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="switch2 switch4fan2-3 sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-4 sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-5 sw-ele-5" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-6 sw-ele-6" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch4fan2-7 sw-ele-7 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="fan switch4fan2-8 sw-ele-8 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div>'
+  );
+
+  closetwo(n, 1, "closethree");
+  closetwo(n, 2, "closetwo");
+  closetwo(n, 3, "closetwo");
+  closetwo(n, 4, "closetwo");
+  closetwo(n, 5, "closetwo");
+  closetwo(n, 6, "closetwo");
+  closetwo(n, 7, "closetwo");
+  closetwo(n, 8, "closethree");
+  closebtn(n);
+}
+function switch4fan2box1(bsize, mod12Name, boxlis, addcls, dataName) {
+  boxSize -= bsize;
+  box1Capacity += bsize;
+  const node = document.createElement("div");
+  node.classList.add("sub-element-" + n);
+  $(mod12Name).append(node);
+  node.classList.add(addcls);
+  $(".sub-element-" + n).html(
+    '<div class="fan switch4fan2-1 sw-ele-1 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div><div class="switch4fan2-2 sw-ele-2 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="switch2 switch4fan2-3 sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-4 sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-5 sw-ele-5" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-6 sw-ele-6" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch4fan2-7 sw-ele-7 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="fan switch4fan2-8 sw-ele-8 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div>'
+  );
+  
+  closetwo(n, 1, "closethree");
+  closetwo(n, 2, "closetwo");
+  closetwo(n, 3, "closetwo");
+  closetwo(n, 4, "closetwo");
+  closetwo(n, 5, "closetwo");
+  closetwo(n, 6, "closetwo");
+  closetwo(n, 7, "closetwo");
+  closetwo(n, 8, "closethree");
+  closebtn(n);
+  boxlis["sub-element-" + n] = bsize;
+  n++;
+  allData["Accessories-" + obj] = dataName;
+  obj++;
+}
+function switch4fan2box2(bsize, mod12Name, boxlis, addcls, dataName) {
+  boxSize -= bsize;
+  box2Capacity += bsize;
+  const node = document.createElement("div");
+  node.classList.add("sub-element-" + n);
+  $(mod12Name).append(node);
+  node.classList.add(addcls);
+  $(".sub-element-" + n).html(
+    '<div class="fan switch4fan2-1 sw-ele-1 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div><div class="switch4fan2-2 sw-ele-2 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="switch2 switch4fan2-3 sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-4 sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-5 sw-ele-5" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-6 sw-ele-6" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch4fan2-7 sw-ele-7 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="fan switch4fan2-8 sw-ele-8 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div>'
+  );
+  
+  closetwo(n, 1, "closethree");
+  closetwo(n, 2, "closetwo");
+  closetwo(n, 3, "closetwo");
+  closetwo(n, 4, "closetwo");
+  closetwo(n, 5, "closetwo");
+  closetwo(n, 6, "closetwo");
+  closetwo(n, 7, "closetwo");
+  closetwo(n, 8, "closethree");
+  closebtn(n);
+  boxlis["sub-element-" + n] = bsize;
+  n++;
+  allData["Accessories-" + obj] = dataName;
+  obj++;
+}
+
 function Switch6fan1(n) {
   const node = document.createElement("div");
   node.classList.add("sub-element-" + n);
@@ -2106,11 +2212,7 @@ function Switch6fan2(n) {
   $(".sub-element-" + n).html(
     '<div class="fan switch6fan2-1 sw-ele-1 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div> <div class="switch6fan2-2 sw-ele-2 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="switch2 switch6fan2-3 sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-4 sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-5 sw-ele-5" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-6 sw-ele-6" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-7 sw-ele-7" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-8 sw-ele-8" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch6fan2-9 sw-ele-9 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="fan switch6fan2-10 sw-ele-10 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div>'
   );
-  if (design === "color") {
-    designColorDefault(10);
-  } else {
-    designEdgeDefault(10);
-  }
+ 
   closetwo(n, 1, "closethree");
   closetwo(n, 2, "closetwo");
   closetwo(n, 3, "closetwo");
@@ -2133,11 +2235,7 @@ function switch6fan2box1(bsize, mod12Name, boxlis, addcls, dataName) {
   $(".sub-element-" + n).html(
     '<div class="fan switch6fan2-1 sw-ele-1 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div> <div class="switch2 switch6fan2-2 sw-ele-2" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="switch2 switch6fan2-3 sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-4 sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-5 sw-ele-5" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-6 sw-ele-6" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-7 sw-ele-7" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-8 sw-ele-8" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-9 sw-ele-9" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="fan switch6fan2-10 sw-ele-10 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div>'
   );
-  if (design === "color") {
-    designColorDefault(10);
-  } else {
-    designEdgeDefault(10);
-  }
+  
   closetwo(n, 1, "closethree");
   closetwo(n, 2, "closetwo");
   closetwo(n, 3, "closetwo");
@@ -2164,11 +2262,7 @@ function switch6fan2box2(bsize, mod12Name, boxlis, addcls, dataName) {
   $(".sub-element-" + n).html(
     '<div class="fan switch6fan2-1 sw-ele-1 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div> <div class="switch2 switch6fan2-2 sw-ele-2" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="switch2 switch6fan2-3 sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-4 sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-5 sw-ele-5" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-6 sw-ele-6" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-7 sw-ele-7" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-8 sw-ele-8" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-9 sw-ele-9" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="fan switch6fan2-10 sw-ele-10 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div>'
   );
-  if (design === "color") {
-    designColorDefault(10);
-  } else {
-    designEdgeDefault(10);
-  }
+  
   closetwo(n, 1, "closethree");
   closetwo(n, 2, "closetwo");
   closetwo(n, 3, "closetwo");
