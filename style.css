@@ -1413,13 +1413,13 @@ hr {
 
 
 /* Switch 4 fan 2 disable */
-li.rmenu-item-icon[title="switch4-fan2"]{
+.coming-soon{
   position: relative;
   z-index: 1;
   pointer-events: none;
 }
 
-li.rmenu-item-icon[title="switch4-fan2"]::after{
+.coming-soon::after{
   z-index: 2;
   content: "COMING SOON";
   position: absolute;
