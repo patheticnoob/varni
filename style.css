@@ -1225,7 +1225,7 @@ hr {
   width: 200px;
   /* height: 8vh; */
   height: 50px;
-  /* display: no; */
+  display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
