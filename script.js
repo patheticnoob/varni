@@ -733,6 +733,96 @@ $(document).ready(function () {
         }
       }
 
+      if ($(this).attr("title") == "Dimme2") {
+        if (boxSize >= 2) {
+          if (mod == 12) {
+            if (boxSize > 6 && 6 >= box1Capacity + 2) {
+              dimme2box1(
+                2,
+                ".sub-module-th",
+                box1lis,
+                "Dimme2",
+                "2 Dimme"
+              );
+            } else if (6 >= box2Capacity + 2) {
+              dimme2box2(
+                2,
+                ".sub-module-fi",
+                box2lis,
+                "Dimme2",
+                "2 Dimme"
+              );
+            } else {
+              myfunction("No Space availabe!");
+            }
+          } else {
+            dimme2(2, "Dimme2", "2 Dimme");
+          }
+        } else {
+          myfunction("Adding 2 Module item is not possible!");
+        }
+      }
+
+      if ($(this).attr("title") == "A-C-usb") {
+        if (boxSize >= 2) {
+          if (mod == 12) {
+            if (boxSize > 6 && 6 >= box1Capacity + 2) {
+              usbACbox1(
+                2,
+                ".sub-module-th",
+                box1lis,
+                "usbAC",
+                "A-C USB"
+              );
+            } else if (6 >= box2Capacity + 2) {
+              usbACbox2(
+                2,
+                ".sub-module-fi",
+                box2lis,
+                "usbAC",
+                "A-C USB"
+              );
+            } else {
+              myfunction("No Space availabe!");
+            }
+          } else {
+            usbAC(2, "usbAC", "A-C USB");
+          }
+        } else {
+          myfunction("Adding 2 Module item is not possible!");
+        }
+      }
+
+      if ($(this).attr("title") == "Scene4") {
+        if (boxSize >= 2) {
+          if (mod == 12) {
+            if (boxSize > 6 && 6 >= box1Capacity + 2) {
+              scene4box1(
+                2,
+                ".sub-module-th",
+                box1lis,
+                "scene4",
+                "4 Scene Controller"
+              );
+            } else if (6 >= box2Capacity + 2) {
+              scene4box2(
+                2,
+                ".sub-module-fi",
+                box2lis,
+                "scene4",
+                "4 Scene Controller"
+              );
+            } else {
+              myfunction("No Space availabe!");
+            }
+          } else {
+            scene4(2, "scene4", "4 Scene Controller");
+          }
+        } else {
+          myfunction("Adding 2 Module item is not possible!");
+        }
+      }
+
       if ($(this).attr("title") == "Switch4") {
         if (boxSize >= 4) {
           if (mod == 12) {
@@ -1677,6 +1767,175 @@ function switch2box2(bsize, mod12Name, boxlis, addcls, dataName) {
   allData["Accessories-" + obj] = dataName;
   obj++;
 }
+
+function dimme2(bsize, addcls, dataName) {
+  boxSize -= bsize;
+  const node = document.createElement("div");
+  node.classList.add("sub-element-" + n);
+  $(".sub-module").append(node);
+  node.classList.add(addcls);
+  $(".sub-element-" + n).html(
+    '<div class="dimme2Incr dimme2box1-1"></div><div class="dimme2Incr dimme2box1-2"></div><div class="dimme2Decr dimme2box1-3"></div><div class="dimme2Decr dimme2box1-4"></div>'
+  );
+
+  closebtn(n);
+  customerRequirement["sub-element-" + n] = bsize;
+  n++;
+  allData["Accessories-" + obj] = dataName;
+  obj++;
+}
+function dimme2box1(bsize, mod12Name, boxlis, addcls, dataName) {
+  boxSize -= bsize;
+  box1Capacity += bsize;
+  const node = document.createElement("div");
+  node.classList.add("sub-element-" + n);
+  $(mod12Name).append(node);
+  node.classList.add(addcls);
+  $(".sub-element-" + n).html(
+    '<div class="dimme2Incr dimme2box1-1"></div><div class="dimme2Incr dimme2box1-2"></div><div class="dimme2Decr dimme2box1-3"></div><div class="dimme2Decr dimme2box1-4"></div>'
+  );
+
+  closebtn(n);
+  boxlis["sub-element-" + n] = bsize;
+  n++;
+  allData["Accessories-" + obj] = dataName;
+  obj++;
+}
+function dimme2box2(bsize, mod12Name, boxlis, addcls, dataName) {
+  boxSize -= bsize;
+  box2Capacity += bsize;
+  const node = document.createElement("div");
+  node.classList.add("sub-element-" + n);
+  $(mod12Name).append(node);
+  node.classList.add(addcls);
+  $(".sub-element-" + n).html(
+    '<div class="dimme2Incr dimme2box1-1"></div><div class="dimme2Incr dimme2box1-2"></div><div class="dimme2Decr dimme2box1-3"></div><div class="dimme2Decr dimme2box1-4"></div>'
+  );
+
+  closebtn(n);
+  boxlis["sub-element-" + n] = bsize;
+  n++;
+  allData["Accessories-" + obj] = dataName;
+  obj++;
+}
+
+function usbAC(bsize, addcls, dataName) {
+  boxSize -= bsize;
+  const node = document.createElement("div");
+  node.classList.add("sub-element-" + n);
+  $(".sub-module").append(node);
+  node.classList.add(addcls);
+  $(".sub-element-" + n).html(
+    '<div class="indicator sw-ele-1"></div><div class="indicator sw-ele-2"></div><div class="a-pin sw-ele-3"></div><div class="c-pin sw-ele-4"></div><div class="type-b sw-ele-5"></div><div class="type-c sw-ele-6"></div>'
+  );
+
+  closebtn(n);
+  customerRequirement["sub-element-" + n] = bsize;
+  n++;
+  allData["Accessories-" + obj] = dataName;
+  obj++;
+}
+function usbACbox1(bsize, mod12Name, boxlis, addcls, dataName) {
+  boxSize -= bsize;
+  box1Capacity += bsize;
+  const node = document.createElement("div");
+  node.classList.add("sub-element-" + n);
+  $(mod12Name).append(node);
+  node.classList.add(addcls);
+  $(".sub-element-" + n).html(
+    '<div class="indicator sw-ele-1"></div><div class="indicator sw-ele-2"></div><div class="a-pin sw-ele-3"></div><div class="c-pin sw-ele-4"></div><div class="type-b sw-ele-5"></div><div class="type-c sw-ele-6"></div>'
+  );
+
+  closebtn(n);
+  boxlis["sub-element-" + n] = bsize;
+  n++;
+  allData["Accessories-" + obj] = dataName;
+  obj++;
+}
+function usbACbox2(bsize, mod12Name, boxlis, addcls, dataName) {
+  boxSize -= bsize;
+  box2Capacity += bsize;
+  const node = document.createElement("div");
+  node.classList.add("sub-element-" + n);
+  $(mod12Name).append(node);
+  node.classList.add(addcls);
+  $(".sub-element-" + n).html(
+    '<div class="indicator sw-ele-1"></div><div class="indicator sw-ele-2"></div><div class="a-pin sw-ele-3"></div><div class="c-pin sw-ele-4"></div><div class="type-b sw-ele-5"></div><div class="type-c sw-ele-6"></div>'
+  );
+
+  closebtn(n);
+  boxlis["sub-element-" + n] = bsize;
+  n++;
+  allData["Accessories-" + obj] = dataName;
+  obj++;
+}
+
+function scene4(bsize, addcls, dataName) {
+  boxSize -= bsize;
+  const node = document.createElement("div");
+  node.classList.add("sub-element-" + n);
+  $(".sub-module").append(node);
+  node.classList.add(addcls);
+  $(".sub-element-" + n).html(
+    '<div class="sceneController switch2-2 sw-ele-1" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="sceneController sw-ele-2" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="sceneController sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="sceneController sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div>'
+  );
+
+  closetwo(n, 1, "closetwo");
+  closetwo(n, 2, "closetwo");
+  closetwo(n, 3, "closetwo");
+  closetwo(n, 4, "closetwo");
+  closebtn(n);
+
+  customerRequirement["sub-element-" + n] = bsize;
+  n++;
+  allData["Accessories-" + obj] = dataName;
+  obj++;
+}
+function scene4box1(bsize, mod12Name, boxlis, addcls, dataName) {
+  boxSize -= bsize;
+  box1Capacity += bsize;
+  const node = document.createElement("div");
+  node.classList.add("sub-element-" + n);
+  $(mod12Name).append(node);
+  node.classList.add(addcls);
+  $(".sub-element-" + n).html(
+    '<div class="sceneController switch2-2 sw-ele-1" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="sceneController sw-ele-2" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="sceneController sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="sceneController sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div>'
+  );
+
+  closetwo(n, 1, "closetwo");
+  closetwo(n, 2, "closetwo");
+  closetwo(n, 3, "closetwo");
+  closetwo(n, 4, "closetwo");
+  closebtn(n);
+
+  boxlis["sub-element-" + n] = bsize;
+  n++;
+  allData["Accessories-" + obj] = dataName;
+  obj++;
+}
+function scene4box2(bsize, mod12Name, boxlis, addcls, dataName) {
+  boxSize -= bsize;
+  box2Capacity += bsize;
+  const node = document.createElement("div");
+  node.classList.add("sub-element-" + n);
+  $(mod12Name).append(node);
+  node.classList.add(addcls);
+  $(".sub-element-" + n).html(
+    '<div class="sceneController switch2-2 sw-ele-1" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="sceneController sw-ele-2" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="sceneController sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="sceneController sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div>'
+  );
+  
+  closetwo(n, 1, "closetwo");
+  closetwo(n, 2, "closetwo");
+  closetwo(n, 3, "closetwo");
+  closetwo(n, 4, "closetwo");
+  closebtn(n);
+
+  boxlis["sub-element-" + n] = bsize;
+  n++;
+  allData["Accessories-" + obj] = dataName;
+  obj++;
+}
+
 function switch4(n) {
   const node = document.createElement("div");
   node.classList.add("sub-element-" + n);
@@ -2081,7 +2340,7 @@ function switch4fan2box1(bsize, mod12Name, boxlis, addcls, dataName) {
   $(".sub-element-" + n).html(
     '<div class="fan switch4fan2-1 sw-ele-1 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div><div class="switch4fan2-2 sw-ele-2 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="switch2 switch4fan2-3 sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-4 sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-5 sw-ele-5" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-6 sw-ele-6" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch4fan2-7 sw-ele-7 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="fan switch4fan2-8 sw-ele-8 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div>'
   );
-  
+
   closetwo(n, 1, "closethree");
   closetwo(n, 2, "closetwo");
   closetwo(n, 3, "closetwo");
@@ -2106,7 +2365,7 @@ function switch4fan2box2(bsize, mod12Name, boxlis, addcls, dataName) {
   $(".sub-element-" + n).html(
     '<div class="fan switch4fan2-1 sw-ele-1 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div><div class="switch4fan2-2 sw-ele-2 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="switch2 switch4fan2-3 sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-4 sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-5 sw-ele-5" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-6 sw-ele-6" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch4fan2-7 sw-ele-7 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="fan switch4fan2-8 sw-ele-8 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div>'
   );
-  
+
   closetwo(n, 1, "closethree");
   closetwo(n, 2, "closetwo");
   closetwo(n, 3, "closetwo");
@@ -2212,7 +2471,7 @@ function Switch6fan2(n) {
   $(".sub-element-" + n).html(
     '<div class="fan switch6fan2-1 sw-ele-1 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div> <div class="switch6fan2-2 sw-ele-2 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="switch2 switch6fan2-3 sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-4 sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-5 sw-ele-5" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-6 sw-ele-6" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-7 sw-ele-7" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-8 sw-ele-8" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch6fan2-9 sw-ele-9 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="fan switch6fan2-10 sw-ele-10 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div>'
   );
- 
+
   closetwo(n, 1, "closethree");
   closetwo(n, 2, "closetwo");
   closetwo(n, 3, "closetwo");
@@ -2235,7 +2494,7 @@ function switch6fan2box1(bsize, mod12Name, boxlis, addcls, dataName) {
   $(".sub-element-" + n).html(
     '<div class="fan switch6fan2-1 sw-ele-1 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div> <div class="switch2 switch6fan2-2 sw-ele-2" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="switch2 switch6fan2-3 sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-4 sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-5 sw-ele-5" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-6 sw-ele-6" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-7 sw-ele-7" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-8 sw-ele-8" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-9 sw-ele-9" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="fan switch6fan2-10 sw-ele-10 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div>'
   );
-  
+
   closetwo(n, 1, "closethree");
   closetwo(n, 2, "closetwo");
   closetwo(n, 3, "closetwo");
@@ -2262,7 +2521,7 @@ function switch6fan2box2(bsize, mod12Name, boxlis, addcls, dataName) {
   $(".sub-element-" + n).html(
     '<div class="fan switch6fan2-1 sw-ele-1 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div> <div class="switch2 switch6fan2-2 sw-ele-2" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="switch2 switch6fan2-3 sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-4 sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-5 sw-ele-5" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-6 sw-ele-6" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-7 sw-ele-7" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-8 sw-ele-8" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-9 sw-ele-9" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="fan switch6fan2-10 sw-ele-10 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div>'
   );
-  
+
   closetwo(n, 1, "closethree");
   closetwo(n, 2, "closetwo");
   closetwo(n, 3, "closetwo");

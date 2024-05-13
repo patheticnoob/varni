@@ -468,6 +468,105 @@ body {
   background-repeat: no-repeat;
   position: relative;
 }
+
+.dimme2Incr {
+  width: 30px;
+  height: 30px;
+  background: url(./icon/m2/increase.png);
+  border-radius: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.dimme2Decr {
+  width: 30px;
+  height: 30px;
+  background: url(./icon/m2/decrease.png);
+  border-radius: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.indicator {
+  width: 15px;
+  height: 15px;
+  /* background: url(./icon/m2/indicator.png); */
+  background: #fff;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin-inline: auto;
+}
+
+.a-pin {
+  width: 40px;
+  height: 20px;
+  /* background: url(./icon/m2/a.png); */
+  border: 1px solid #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin-inline: auto;
+}
+
+.c-pin {
+  width: 40px;
+  height: 20px;
+  /* background: url(./icon/m2/c.png); */
+  border: 1px solid #fff;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin-inline: auto;
+}
+
+.type-b {
+  width: 40px;
+  height: 17px;
+  background: url(./icon/m2/Type\ b.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin-inline: auto;
+}
+
+.type-c {
+  width: 40px;
+  height: 18px;
+  background: url(./icon/m2/type\ c.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin-inline: auto;
+}
+
+.sceneController {
+  width: 30px;
+  height: 30px;
+  /* background: url(./icon/m2/scene\ controller.png); */
+  border: 2px solid rgb(12, 154, 193);
+  border-radius: 6px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.sceneController img{
+  width: 100%;
+}
+
 .switch6-1,
 .switch6-2 {
   left: 20px;
@@ -1313,6 +1412,10 @@ hr {
   align-items: center;
 }
 
+.switch10>*{
+  margin-inline: auto;
+}
+
 
 .switch6fan2{
   display: grid;
@@ -1323,6 +1426,10 @@ hr {
   width: 432px;
   height: 146px;
   position: relative;
+}
+
+.switch6fan2>*{
+  margin-inline: auto;
 }
 
 .switch6fan2-1{
@@ -1379,6 +1486,10 @@ hr {
   padding-inline: 20px;
 }
 
+.switch4fan2>*{
+  margin-inline: auto;
+}
+
 .switch4fan2-1{
   grid-area: s1;
 }
@@ -1412,7 +1523,92 @@ hr {
 }
 
 
-/* Switch 4 fan 2 disable */
+.Dimme2{
+  display: grid;
+  align-items: center;
+  grid-template-areas: 
+  "di1 di2"
+  "dd1 dd2";
+  height: 146px;
+  width: 280px;
+  position: relative;
+}
+
+.Dimme2>.dimme2box1-1{
+  grid-area: di1;
+}
+.Dimme2>.dimme2box1-2{
+  grid-area: di2;
+}
+.Dimme2>.dimme2box1-3{
+  grid-area: dd1;
+}
+.Dimme2>.dimme2box1-4{
+  grid-area: dd2;
+}
+
+.scene4{
+  display: grid;
+  align-items: center;
+  grid-template-areas: 
+  "sc1 sc2"
+  "sc3 sc4";
+  height: 146px;
+  width: 280px;
+  position: relative;
+}
+
+.scene4>*{
+  margin-inline: auto;
+}
+
+.scene4>.sw-ele-1{
+  grid-area: sc1;
+}
+.scene4>.sw-ele-2{
+  grid-area: sc2;
+}
+.scene4>.sw-ele-3{
+  grid-area: sc3;
+}
+.scene4>.sw-ele-4{
+  grid-area: sc4;
+}
+
+
+.usbAC{
+  display: grid;
+  align-items: center;
+  grid-template-areas: 
+  "i1 i2"
+  ". ."
+  "apin cpin"
+  "typeb typec";
+  height: 146px;
+  width: 280px;
+  position: relative;
+}
+
+.usbAC>.sw-ele-1{
+  grid-area: i1;
+}
+.usbAC>.sw-ele-2{
+  grid-area: i2;
+}
+.usbAC>.sw-ele-3{
+  grid-area: apin;
+}
+.usbAC>.sw-ele-4{
+  grid-area: cpin;
+}
+.usbAC>.sw-ele-5{
+  grid-area: typeb;
+}
+.usbAC>.sw-ele-6{
+  grid-area: typec;
+}
+
+/* Coming soon */
 .coming-soon{
   position: relative;
   z-index: 1;
