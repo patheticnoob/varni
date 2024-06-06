@@ -1034,7 +1034,7 @@ $(document).ready(function () {
 
 
       if ($(this).attr("title") == "switch6-fan2") {
-        if (boxSize >= 8) {
+        if (boxSize == 8) {
           if (mod == 12) {
             if (boxSize > 8 && 8 >= box1Capacity + 8) {
               switch6fan2box1(
@@ -1065,7 +1065,7 @@ $(document).ready(function () {
             obj++;
           }
         } else {
-          myfunction("Adding 8 Module item is not possible!");
+          myfunction("This item is only supported in 8 Module size!");
         }
       }
     } else {
