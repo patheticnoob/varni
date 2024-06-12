@@ -1558,7 +1558,8 @@ hr {
   position: relative;
 }
 
-.scene4>*{
+.scene4>*,
+.Dimme2>*{
   margin-inline: auto;
 }
 
