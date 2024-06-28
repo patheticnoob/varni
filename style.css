@@ -598,6 +598,13 @@ body {
   /* height: 22.376vh; */
   position: relative;
 }
+
+.switch6fan1 {
+  width: 600px;
+  height: 146px;
+  position: relative;
+}
+
 .switch8-1,
 .switch8-2 {
   left: 45px;

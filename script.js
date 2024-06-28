@@ -1004,7 +1004,7 @@ $(document).ready(function () {
                 6,
                 ".sub-module-th",
                 box1lis,
-                "switch8",
+                "switch6fan1",
                 "6 Switch + 1 fan"
               );
             } else if (6 >= box2Capacity + 6) {
@@ -1012,7 +1012,7 @@ $(document).ready(function () {
                 6,
                 ".sub-module-fi",
                 box2lis,
-                "switch8",
+                "switch6fan1",
                 "6 Switch + 1 fan"
               );
             } else {
@@ -2385,7 +2385,7 @@ function Switch6fan1(n) {
   const node = document.createElement("div");
   node.classList.add("sub-element-" + n);
   $(".sub-module").append(node);
-  node.classList.add("switch8");
+  node.classList.add("switch6fan1");
   $(".sub-element-" + n).html(
     '<div class="switch2 switch6fan1-1 sw-ele-1" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan1-2 sw-ele-2" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan1-3 sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan1-4 sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan1-5 sw-ele-5" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan1-6 sw-ele-6" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan1-7 sw-ele-7" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="fan switch6fan1-8 sw-ele-8 hiden-border" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div>'
   );
