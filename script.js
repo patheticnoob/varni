@@ -640,6 +640,35 @@ $(document).ready(function () {
           myfunction("Adding 2 Module item is not possible!");
         }
       }
+      if ($(this).attr("title") == "universal-socket-amp") {
+        if (boxSize >= 2) {
+          if (mod == 12) {
+            if (boxSize > 6 && 6 >= box1Capacity + 2) {
+              box1mod12(
+                2,
+                ".sub-module-th",
+                box1lis,
+                "universal-socket-amp",
+                "Universal Socket"
+              );
+            } else if (6 >= box2Capacity + 2) {
+              box1mod21(
+                2,
+                ".sub-module-fi",
+                box2lis,
+                "universal-socket-amp",
+                "Universal Socket"
+              );
+            } else {
+              myfunction("No Space availabe!");
+            }
+          } else {
+            box2modAll(2, "universal-socket-amp", "Universal Socket");
+          }
+        } else {
+          myfunction("Adding 2 Module item is not possible!");
+        }
+      }
       if ($(this).attr("title") == "socket-6-amp") {
         if (boxSize >= 2) {
           if (mod == 12) {

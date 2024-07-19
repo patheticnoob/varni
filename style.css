@@ -424,6 +424,17 @@ body {
   background-repeat: no-repeat;
   position: relative;
 }
+.universal-socket-amp {
+  height: 145px;
+  /* height: 22.376vh; */
+  width: 140px;
+  /* width: 10.937vw; */
+  background-image: url(./icon/m2/UniversalSocket.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
 .socket-6-amp {
   height: 145px;
   /* height: 22.376vh; */
@@ -993,6 +1004,7 @@ body {
   .switch,
   .bell,
   .curtain,
+  .universal-socket-amp,
   .socket-6-amp,
   .socket-16-amp {
     height: 92.85px;
