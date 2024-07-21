@@ -1549,6 +1549,8 @@ $(document).ready(function () {
     $(".module").removeClass("module-black");
     $(".module").removeClass("module-white");
     $(".module").removeClass("module-grey");
+    $(".module").removeClass("module-RoyalBlue");
+    $(".module").removeClass("module-Gold");
     if ($(this).attr("title") == "black") {
       $(".module").addClass("module-black");
       allData[glassName] = "black";
@@ -1560,6 +1562,14 @@ $(document).ready(function () {
     if ($(this).attr("title") == "grey") {
       $(".module").addClass("module-grey");
       allData[glassName] = "Grey";
+    }
+    if ($(this).attr("title") == "RoyalBlue") {
+      $(".module").addClass("module-RoyalBlue");
+      allData[glassName] = "RoyalBlue";
+    }
+    if ($(this).attr("title") == "Gold") {
+      $(".module").addClass("module-Gold");
+      allData[glassName] = "Gold";
     }
   });
 
@@ -1585,9 +1595,9 @@ $(document).ready(function () {
       $(".module").addClass("module-fRosegold");
       allData.frame = "Rosegold";
     }
-    if ($(this).attr("title") == "Chrome") {
+    if ($(this).attr("title") == "Silver") {
       $(".module").addClass("module-fsilver");
-      allData.glass = "Chrome";
+      allData.glass = "Silver";
     }
   });
 
