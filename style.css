@@ -1657,3 +1657,11 @@ hr {
   font-size: 10px;
   font-weight: 600;
 }
+
+
+[data-droppable-class="fan"].backgroundNone,
+[data-droppable-class].hiden-border img{
+  padding: 2px;
+  border: 2px solid #00a0e3;
+  border-radius: 5px;
+}
