@@ -515,12 +515,12 @@ body {
   position: relative;
 }
 
-.universal-socket-amp {
+.pin-3-socket-amp {
   height: 145px;
   /* height: 22.376vh; */
   width: 140px;
   /* width: 10.937vw; */
-  background-image: url(./icon/m2/UniversalSocket.png);
+  background-image: url(./icon/m2/3PinSocket.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
