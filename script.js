@@ -1552,23 +1552,23 @@ $(document).ready(function () {
     $(".module").removeClass("module-grey");
     $(".module").removeClass("module-RoyalBlue");
     $(".module").removeClass("module-Gold");
-    if ($(this).find('span').attr('title') == "black") {
+    if ($(this).attr('title') == "black") {
       $(".module").addClass("module-black");
       allData[glassName] = "black";
     }
-    if ($(this).find('span').attr('title') == "white") {
+    if ($(this).attr('title') == "white") {
       $(".module").addClass("module-white");
       allData[glassName] = "white";
     }
-    if ($(this).find('span').attr('title') == "grey") {
+    if ($(this).attr('title') == "grey") {
       $(".module").addClass("module-grey");
       allData[glassName] = "Grey";
     }
-    if ($(this).find('span').attr('title') == "RoyalBlue") {
+    if ($(this).attr('title') == "RoyalBlue") {
       $(".module").addClass("module-RoyalBlue");
       allData[glassName] = "RoyalBlue";
     }
-    if ($(this).find('span').attr('title') == "Gold") {
+    if ($(this).attr('title') == "Gold") {
       $(".module").addClass("module-Gold");
       allData[glassName] = "Gold";
     }
@@ -1580,23 +1580,23 @@ $(document).ready(function () {
     $(".module").removeClass("module-fgray");
     $(".module").removeClass("module-fRosegold");
     $(".module").removeClass("module-fsilver");
-    if ($(this).find('span').attr('title') == "black") {
+    if ($(this).attr('title') == "black") {
       $(".module").addClass("module-fsblack");
       allData.frame = "Black";
     }
-    if ($(this).find('span').attr('title') == "gold") {
+    if ($(this).attr('title') == "gold") {
       $(".module").addClass("module-fgold");
       allData.frame = "Gold";
     }
-    if ($(this).find('span').attr('title') == "grey") {
+    if ($(this).attr('title') == "grey") {
       $(".module").addClass("module-fgray");
       allData.frame = "Grey";
     }
-    if ($(this).find('span').attr('title') == "Rosegold") {
+    if ($(this).attr('title') == "Rosegold") {
       $(".module").addClass("module-fRosegold");
       allData.frame = "Rosegold";
     }
-    if ($(this).find('span').attr('title') == "Silver") {
+    if ($(this).attr('title') == "Silver") {
       $(".module").addClass("module-fsilver");
       allData.glass = "Silver";
     }
