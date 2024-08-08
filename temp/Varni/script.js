@@ -70,7 +70,7 @@ $(document).ready(function () {
 
       $(".quantity-switch").css("display", "none");
     } else {
-      myfunction("Important! Please Select the quantity..");
+      customAlert("Important! Please Select the quantity..");
     }
   });
   $(".mod-close").click(function () {
@@ -454,13 +454,13 @@ $(document).ready(function () {
             } else if (6 >= box2Capacity + 1) {
               box1mod21(1, ".sub-module-fi", box2lis, "usb", "USB");
             } else {
-              myfunction("No Space availabe!");
+              customAlert("No Space availabe!");
             }
           } else {
             box2modAll(1, "usb", "USB");
           }
         } else {
-          myfunction("Adding 1 Module item is not possible!");
+          customAlert("Adding 1 Module item is not possible!");
         }
       }
       if ($(this).attr("title") == "ethernet") {
@@ -471,13 +471,13 @@ $(document).ready(function () {
             } else if (6 >= box2Capacity + 1) {
               box1mod21(1, ".sub-module-fi", box2lis, "ethernet", "Ethernet");
             } else {
-              myfunction("No Space availabe!");
+              customAlert("No Space availabe!");
             }
           } else {
             box2modAll(1, "ethernet", "Ethernet");
           }
         } else {
-          myfunction("Adding 1 Module item is not possible!");
+          customAlert("Adding 1 Module item is not possible!");
         }
       }
       if ($(this).attr("title") == "telephone") {
@@ -488,13 +488,13 @@ $(document).ready(function () {
             } else if (6 >= box2Capacity + 1) {
               box1mod21(1, ".sub-module-fi", box2lis, "telephone", "Telephone");
             } else {
-              myfunction("No Space availabe!");
+              customAlert("No Space availabe!");
             }
           } else {
             box2modAll(1, "telephone", "Telephone");
           }
         } else {
-          myfunction("Adding 1 Module item is not possible!");
+          customAlert("Adding 1 Module item is not possible!");
         }
       }
       if ($(this).attr("title") == "tv") {
@@ -505,13 +505,13 @@ $(document).ready(function () {
             } else if (6 >= box2Capacity + 1) {
               box1mod21(1, ".sub-module-fi", box2lis, "tv", "TV");
             } else {
-              myfunction("No Space availabe!");
+              customAlert("No Space availabe!");
             }
           } else {
             box2modAll(1, "tv", "TV");
           }
         } else {
-          myfunction("Adding 1 Module item is not possible!");
+          customAlert("Adding 1 Module item is not possible!");
         }
       }
       if ($(this).attr("title") == "switch2") {
@@ -522,13 +522,13 @@ $(document).ready(function () {
             } else if (6 >= box2Capacity + 2) {
               switch2box2(2, ".sub-module-fi", box2lis, "switch", "2 Switch");
             } else {
-              myfunction("No Space availabe!");
+              customAlert("No Space availabe!");
             }
           } else {
             switch2(2, "switch", "2 Switch");
           }
         } else {
-          myfunction("Adding 2 Module item is not possible!");
+          customAlert("Adding 2 Module item is not possible!");
         }
       }
       if ($(this).attr("title") == "switch2-1-16A") {
@@ -551,13 +551,13 @@ $(document).ready(function () {
                 "2 Switch (1-16A)"
               );
             } else {
-              myfunction("No Space availabe!");
+              customAlert("No Space availabe!");
             }
           } else {
             switch2(2, "switch", "2 Switch (1-16A)");
           }
         } else {
-          myfunction("Adding 2 Module item is not possible!");
+          customAlert("Adding 2 Module item is not possible!");
         }
       }
       if ($(this).attr("title") == "switch2-1-2way") {
@@ -580,13 +580,13 @@ $(document).ready(function () {
                 "2 Switch (1-2way)"
               );
             } else {
-              myfunction("No Space availabe!");
+              customAlert("No Space availabe!");
             }
           } else {
             switch2(2, "switch", "2 Switch (1-2way)");
           }
         } else {
-          myfunction("Adding 2 Module item is not possible!");
+          customAlert("Adding 2 Module item is not possible!");
         }
       }
       if ($(this).attr("title") == "switch2-2-16A") {
@@ -609,13 +609,13 @@ $(document).ready(function () {
                 "2 Switch (2-16A)"
               );
             } else {
-              myfunction("No Space availabe!");
+              customAlert("No Space availabe!");
             }
           } else {
             switch2(2, "switch", "2 Switch (2-16A)");
           }
         } else {
-          myfunction("Adding 2 Module item is not possible!");
+          customAlert("Adding 2 Module item is not possible!");
         }
       }
       if ($(this).attr("title") == "socket-6-amp") {
@@ -638,13 +638,13 @@ $(document).ready(function () {
                 "6 Amp Socket"
               );
             } else {
-              myfunction("No Space availabe!");
+              customAlert("No Space availabe!");
             }
           } else {
             box2modAll(2, "socket-6-amp", "6 Amp Socket");
           }
         } else {
-          myfunction("Adding 2 Module item is not possible!");
+          customAlert("Adding 2 Module item is not possible!");
         }
       }
       if ($(this).attr("title") == "socket-16-amp") {
@@ -667,13 +667,13 @@ $(document).ready(function () {
                 "16 Amp Socket"
               );
             } else {
-              myfunction("No Space availabe!");
+              customAlert("No Space availabe!");
             }
           } else {
             box2modAll(2, "socket-16-amp", "16 Amp Socket");
           }
         } else {
-          myfunction("Adding 2 Module item is not possible!");
+          customAlert("Adding 2 Module item is not possible!");
         }
       }
       if ($(this).attr("title") == "bell") {
@@ -684,13 +684,13 @@ $(document).ready(function () {
             } else if (6 >= box2Capacity + 2) {
               box1mod21(2, ".sub-module-fi", box2lis, "bell", "Bell");
             } else {
-              myfunction("No Space availabe!");
+              customAlert("No Space availabe!");
             }
           } else {
             box2modAll(2, "bell", "Bell");
           }
         } else {
-          myfunction("Adding 2 Module item is not possible!");
+          customAlert("Adding 2 Module item is not possible!");
         }
       }
       if ($(this).attr("title") == "curtain") {
@@ -701,13 +701,13 @@ $(document).ready(function () {
             } else if (6 >= box2Capacity + 2) {
               box1mod21(2, ".sub-module-fi", box2lis, "curtain", "Curtain");
             } else {
-              myfunction("No Space availabe!");
+              customAlert("No Space availabe!");
             }
           } else {
             box2modAll(2, "curtain", "Curtain");
           }
         } else {
-          myfunction("Adding 2 Module item is not possible!");
+          customAlert("Adding 2 Module item is not possible!");
         }
       }
 
@@ -721,7 +721,7 @@ $(document).ready(function () {
               // box1mod21(4, ".sub-module-fi", box2lis, "switch4", "4 Switch");
               switch4box2(4, ".sub-module-fi", box2lis, "switch4", "4 Switch");
             } else {
-              myfunction("No Space availabe!");
+              customAlert("No Space availabe!");
             }
           } else {
             boxSize -= 4;
@@ -732,7 +732,7 @@ $(document).ready(function () {
             obj++;
           }
         } else {
-          myfunction("Adding 4 Module item is not possible!");
+          customAlert("Adding 4 Module item is not possible!");
         }
       }
       if ($(this).attr("title") == "Switch4-fan1") {
@@ -755,7 +755,7 @@ $(document).ready(function () {
                 "4 Switch + 1 fan"
               );
             } else {
-              myfunction("No Space availabe!");
+              customAlert("No Space availabe!");
             }
           } else {
             // box2modAll(4, "Switch4-fan1", "4 Switch + 1 fan");
@@ -767,7 +767,7 @@ $(document).ready(function () {
             obj++;
           }
         } else {
-          myfunction("Adding 4 Module item is not possible!");
+          customAlert("Adding 4 Module item is not possible!");
         }
       }
       if ($(this).attr("title") == "Switch6") {
@@ -779,7 +779,7 @@ $(document).ready(function () {
             } else if (6 >= box2Capacity + 4) {
               switch6box2(4, ".sub-module-fi", box2lis, "switch4", "6 Switch");
             } else {
-              myfunction("No Space availabe!");
+              customAlert("No Space availabe!");
             }
           } else {
             // box2modAll(4, "Switch6", "6 Switch");
@@ -791,7 +791,7 @@ $(document).ready(function () {
             obj++;
           }
         } else {
-          myfunction("Adding 4 Module item is not possible!");
+          customAlert("Adding 4 Module item is not possible!");
         }
       }
       if ($(this).attr("title") == "switch8") {
@@ -804,7 +804,7 @@ $(document).ready(function () {
               // box1mod21(6, ".sub-module-fi", box2lis, "switch8", "8 Switch");
               switch8box2(6, ".sub-module-fi", box2lis, "switch8", "8 Switch");
             } else {
-              myfunction("No Space availabe!");
+              customAlert("No Space availabe!");
             }
           } else {
             // box2modAll(6, "switch8", "8 Switch");
@@ -816,7 +816,7 @@ $(document).ready(function () {
             obj++;
           }
         } else {
-          myfunction("Adding 6 Module item is not possible!");
+          customAlert("Adding 6 Module item is not possible!");
         }
       }
       if ($(this).attr("title") == "switch6-fan1") {
@@ -839,7 +839,7 @@ $(document).ready(function () {
                 "6 Switch + 1 fan"
               );
             } else {
-              myfunction("No Space availabe!");
+              customAlert("No Space availabe!");
             }
           } else {
             // box2modAll(6, "switch6-fan1", "6 Switch + 1 fan");
@@ -851,11 +851,11 @@ $(document).ready(function () {
             obj++;
           }
         } else {
-          myfunction("Adding 6 Module item is not possible!");
+          customAlert("Adding 6 Module item is not possible!");
         }
       }
     } else {
-      myfunction("You can not add more accessories...");
+      customAlert("You can not add more accessories...");
     }
   });
 
@@ -1198,7 +1198,7 @@ $(document).ready(function () {
         var num = getObjectValue(customerRequirement, "sub-element-22");
         otherBox(num, "Accessories-22");
       }
-      myfunction(
+      customAlert(
         "You have exceded maximum number of attempts! Please Start from selecting Material Again..."
       );
     }
@@ -1216,7 +1216,7 @@ $(document).ready(function () {
         var num = getObjectValue(customerRequirement, "sub-element-23");
         otherBox(num, "Accessories-23");
       }
-      myfunction(
+      customAlert(
         "You have exceded maximum number of attempts! Please Start from selecting Material Again..."
       );
     }
@@ -1234,7 +1234,7 @@ $(document).ready(function () {
         var num = getObjectValue(customerRequirement, "sub-element-24");
         otherBox(num, "Accessories-24");
       }
-      myfunction(
+      customAlert(
         "You have exceded maximum number of attempts! Please Start from selecting Material Again..."
       );
     }
@@ -1252,7 +1252,7 @@ $(document).ready(function () {
         var num = getObjectValue(customerRequirement, "sub-element-25");
         otherBox(num, "Accessories-25");
       }
-      myfunction(
+      customAlert(
         "You have exceded maximum number of attempts! Please Start from selecting Material Again..."
       );
     }
@@ -1411,7 +1411,7 @@ function closetwo(n, m, closeClass) {
 function getObjectValue(obj, key) {
   return Object.values(obj).find((value) => obj[key] === value);
 }
-function myfunction(note) {
+function customAlert(note) {
   var al = document.getElementById("alertBox");
   al.style.display = "block";
   var ele = document.getElementById("text");

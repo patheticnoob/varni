@@ -1182,7 +1182,7 @@
       ssc.focus();
       ssc.print();
     }, function (error) {
-      alert("Something went wrong in Email sending process!\nEmail quota: 0!")
+      customAlert("Something went wrong in Email sending process!\nEmail quota: 0!")
       console.error("Email sending failed", error);
     });
   }

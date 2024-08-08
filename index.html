@@ -53,31 +53,39 @@
   <!-- Custom CSS -->
   <link href="./style.css" rel="stylesheet" />
 </head>
-<div id="alertBox">
-  <div class="box">
-    <h1 class="heading">Alert!</h1>
-    <div class="content">
-      <p id="text"></p>
-      <button type="button" id="cnfbtn" class="btn btn-success" onclick="cancelAlert()">
-        OK
-      </button>
-    </div>
-  </div>
-</div>
-<!-- down right corner logo -->
-<div class="ml-auto tp-flogo" style="position: absolute; right: 20px">
-  <input type="email" id="email-verify" class="verify-email form-control ml-auto" style="display: none; width: auto"
-    placeholder="Enter Email" disabled />
-  <button id="GetEmail" onclick="takeScreeshot()" class="btn btn-success ml-auto hide" disabled>
-    Download
-  </button>
-  <button id="GetImg" onclick="takePdf()" class="btn btn-success ml-auto"
-    style="display: none; position: relative; bottom: 0px" disabled>
-    Download
-  </button>
-</div>
 
 <body id="myBody">
+  <div id="alertBoxContainer" onclick="cancelAlert()">
+    <div id="alertBox">
+      <div class="box">
+        <h1 class="heading">Alert!</h1>
+        <div class="content">
+          <p id="text"></p>
+          <button type="button" id="cnfbtn" class="btn btn-info" onclick="cancelAlert()">
+            OK
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="watermark" class="hide">
+    <img src="./Image/logoVerni.png" height="60" />
+  </div>
+
+  <!-- down right corner content -->
+  <div class="ml-auto tp-flogo" style="position: absolute; right: 20px">
+    <input type="email" id="email-verify" class="verify-email form-control ml-auto" style="display: none; width: auto"
+      placeholder="Enter Email" disabled />
+    <button id="GetEmail" onclick="takeScreeshot()" class="btn btn-success ml-auto hide" disabled>
+      Download
+    </button>
+    <button id="GetImg" onclick="takePdf()" class="btn btn-success ml-auto"
+      style="display: none; position: relative; bottom: 4px" disabled>
+      Download
+    </button>
+  </div>
+
   <nav class="navbar navbar-expand-md fixed-top">
     <a class="navbar-brand" href="#"><img src="./Image/logoVerni.png" height="60" /></a>
   </nav>
@@ -87,8 +95,20 @@
       <div class="starter-template">
         <h1>Create Your Own Panel</h1>
         <p class="lead">Smart Home Choice of Smart People.</p>
-        <button class="btn-grad-edge" id="buildbtn">Edge</button>
-        <button class="btn-grad-color" id="colorSec">Color</button>
+        <button class="btn-grad-edge" id="buildbtn">
+          <span class="shadow"></span>
+          <span class="edge"></span>
+          <span class="front">
+            Edge
+          </span>
+        </button>
+        <button class="btn-grad-color" id="colorSec">
+          <span class="shadow"></span>
+          <span class="edge"></span>
+          <span class="front">
+            Color
+          </span>
+        </button>
         <p class="turn my-3">
           <strong>
             Note : Please Rotate Your Phone to Start Building Board.
@@ -320,22 +340,19 @@
           </li>
           <li class="rmenu-item-i">
             <img id="drag216" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
-              src="./icon/Icons80x80px/Decorative Lights/1.png" alt="1/2 way swaitch"
-              data-draggable-class="switch" />
+              src="./icon/Icons80x80px/Decorative Lights/1.png" alt="1/2 way swaitch" data-draggable-class="switch" />
           </li>
           <li class="rmenu-item-i">
             <img id="drag217" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
-              src="./icon/Icons80x80px/Decorative Lights/2.png" alt="1/2 way swaitch"
-              data-draggable-class="switch" />
+              src="./icon/Icons80x80px/Decorative Lights/2.png" alt="1/2 way swaitch" data-draggable-class="switch" />
           </li>
           <li class="rmenu-item-i">
             <img id="drag218" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
-              src="./icon/Icons80x80px/Decorative Lights/3.png" alt="1/2 way swaitch"
-              data-draggable-class="switch" />
+              src="./icon/Icons80x80px/Decorative Lights/3.png" alt="1/2 way swaitch" data-draggable-class="switch" />
           </li>
 
 
-<!-- --------------------------------------------------------------------------------------------------- -->
+          <!-- --------------------------------------------------------------------------------------------------- -->
 
 
           <li class="rmenu-icon-title"><strong>Home Appliances</strong></li>
@@ -461,14 +478,14 @@
               src="./icon/Icons80x80px/Home Appliances/10.png" alt="1/2 way swaitch" data-draggable-class="switch" />
           </li>
           <li class="rmenu-item-i">
-              <img id="drag180" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
-                src="./icon/Icons80x80px/Home Appliances/11.png" alt="1/2 way swaitch" data-draggable-class="switch" />
-            </li>
-            <li class="rmenu-item-i">
+            <img id="drag180" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
+              src="./icon/Icons80x80px/Home Appliances/11.png" alt="1/2 way swaitch" data-draggable-class="switch" />
+          </li>
+          <li class="rmenu-item-i">
             <img id="drag181" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
               src="./icon/Icons80x80px/Home Appliances/12.png" alt="1/2 way swaitch" data-draggable-class="switch" />
           </li>
-          
+
           <li class="rmenu-item-i">
             <img id="drag182" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
               src="./icon/Icons80x80px/Home Appliances/13.png" alt="1/2 way swaitch" data-draggable-class="switch" />
@@ -500,7 +517,7 @@
 
 
 
-<!-- --------------------------------------------------------------------------------------------------- -->
+          <!-- --------------------------------------------------------------------------------------------------- -->
 
 
           <li class="rmenu-icon-title"><strong>Scene</strong></li>
@@ -622,7 +639,7 @@
           </li>
 
 
-<!-- --------------------------------------------------------------------------------------------------- -->
+          <!-- --------------------------------------------------------------------------------------------------- -->
 
 
 
@@ -693,7 +710,7 @@
           </li>
 
 
-<!-- --------------------------------------------------------------------------------------------------- -->
+          <!-- --------------------------------------------------------------------------------------------------- -->
 
 
           <li class="rmenu-icon-title"><strong>Light</strong></li>
@@ -828,7 +845,7 @@
 
 
 
-<!-- --------------------------------------------------------------------------------------------------- -->
+          <!-- --------------------------------------------------------------------------------------------------- -->
 
 
           <li class="rmenu-icon-title"><strong>COB Lighting</strong></li>
@@ -846,7 +863,7 @@
           </li>
 
 
-<!-- --------------------------------------------------------------------------------------------------- -->
+          <!-- --------------------------------------------------------------------------------------------------- -->
 
 
 
@@ -909,9 +926,9 @@
           </li>
 
 
-<!-- --------------------------------------------------------------------------------------------------- -->
-        
-          
+          <!-- --------------------------------------------------------------------------------------------------- -->
+
+
           <li class="rmenu-icon-title"><strong>Fan</strong></li>
           <li class="rmenu-item-i">
             <img id="drag96" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
@@ -997,70 +1014,70 @@
           </li>
 
 
-<!-- --------------------------------------------------------------------------------------------------- -->
+          <!-- --------------------------------------------------------------------------------------------------- -->
 
-<li class="rmenu-icon-title"><strong>BLDC Fan</strong></li>
-<li class="rmenu-item-i">
-  <img id="drag148" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
-    src="./icon/Icons80x80px/BLDC/1.png" alt="fan" data-draggable-class="switch" />
-</li>
-<li class="rmenu-item-i">
-  <img id="drag149" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
-    src="./icon/Icons80x80px/BLDC/2.png" alt="fan" data-draggable-class="switch" />
-</li>
-<li class="rmenu-item-i">
-  <img id="drag150" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
-    src="./icon/Icons80x80px/BLDC/3.png" alt="fan" data-draggable-class="switch" />
-</li>
-<li class="rmenu-item-i">
-  <img id="drag151" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
-    src="./icon/Icons80x80px/BLDC/4.png" alt="fan" data-draggable-class="switch" />
-</li>
-<li class="rmenu-item-i">
-  <img id="drag152" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
-    src="./icon/Icons80x80px/BLDC/5.png" alt="fan" data-draggable-class="switch" />
-</li>
-<li class="rmenu-item-i">
-  <img id="drag153" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
-    src="./icon/Icons80x80px/BLDC/6.png" alt="fan" data-draggable-class="switch" />
-</li>
-<li class="rmenu-item-i">
-  <img id="drag154" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
-    src="./icon/Icons80x80px/BLDC/7.png" alt="fan" data-draggable-class="switch" />
-</li>
-<li class="rmenu-item-i">
-  <img id="drag155" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
-    src="./icon/Icons80x80px/BLDC/8.png" alt="fan" data-draggable-class="switch" />
-</li>
-<li class="rmenu-item-i">
-  <img id="drag156" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
-    src="./icon/Icons80x80px/BLDC/9.png" alt="fan" data-draggable-class="switch" />
-</li>
-<li class="rmenu-item-i">
-  <img id="drag157" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
-    src="./icon/Icons80x80px/BLDC/10.png" alt="fan" data-draggable-class="switch" />
-</li>
-<li class="rmenu-item-i">
-  <img id="drag158" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
-    src="./icon/Icons80x80px/BLDC/11.png" alt="fan" data-draggable-class="switch" />
-</li>
-<li class="rmenu-item-i">
-  <img id="drag159" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
-    src="./icon/Icons80x80px/BLDC/12.png" alt="fan" data-draggable-class="switch" />
-</li>
-<li class="rmenu-item-i">
-  <img id="drag160" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
-    src="./icon/Icons80x80px/BLDC/13.png" alt="fan" data-draggable-class="switch" />
-</li>
-
-
-<!-- --------------------------------------------------------------------------------------------------- -->
+          <li class="rmenu-icon-title"><strong>BLDC Fan</strong></li>
+          <li class="rmenu-item-i">
+            <img id="drag148" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
+              src="./icon/Icons80x80px/BLDC/1.png" alt="fan" data-draggable-class="switch" />
+          </li>
+          <li class="rmenu-item-i">
+            <img id="drag149" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
+              src="./icon/Icons80x80px/BLDC/2.png" alt="fan" data-draggable-class="switch" />
+          </li>
+          <li class="rmenu-item-i">
+            <img id="drag150" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
+              src="./icon/Icons80x80px/BLDC/3.png" alt="fan" data-draggable-class="switch" />
+          </li>
+          <li class="rmenu-item-i">
+            <img id="drag151" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
+              src="./icon/Icons80x80px/BLDC/4.png" alt="fan" data-draggable-class="switch" />
+          </li>
+          <li class="rmenu-item-i">
+            <img id="drag152" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
+              src="./icon/Icons80x80px/BLDC/5.png" alt="fan" data-draggable-class="switch" />
+          </li>
+          <li class="rmenu-item-i">
+            <img id="drag153" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
+              src="./icon/Icons80x80px/BLDC/6.png" alt="fan" data-draggable-class="switch" />
+          </li>
+          <li class="rmenu-item-i">
+            <img id="drag154" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
+              src="./icon/Icons80x80px/BLDC/7.png" alt="fan" data-draggable-class="switch" />
+          </li>
+          <li class="rmenu-item-i">
+            <img id="drag155" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
+              src="./icon/Icons80x80px/BLDC/8.png" alt="fan" data-draggable-class="switch" />
+          </li>
+          <li class="rmenu-item-i">
+            <img id="drag156" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
+              src="./icon/Icons80x80px/BLDC/9.png" alt="fan" data-draggable-class="switch" />
+          </li>
+          <li class="rmenu-item-i">
+            <img id="drag157" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
+              src="./icon/Icons80x80px/BLDC/10.png" alt="fan" data-draggable-class="switch" />
+          </li>
+          <li class="rmenu-item-i">
+            <img id="drag158" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
+              src="./icon/Icons80x80px/BLDC/11.png" alt="fan" data-draggable-class="switch" />
+          </li>
+          <li class="rmenu-item-i">
+            <img id="drag159" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
+              src="./icon/Icons80x80px/BLDC/12.png" alt="fan" data-draggable-class="switch" />
+          </li>
+          <li class="rmenu-item-i">
+            <img id="drag160" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
+              src="./icon/Icons80x80px/BLDC/13.png" alt="fan" data-draggable-class="switch" />
+          </li>
 
 
-<!-- --------------------------------------------------------------------------------------------------- -->
+          <!-- --------------------------------------------------------------------------------------------------- -->
 
 
-<!-- --------------------------------------------------------------------------------------------------- -->
+          <!-- --------------------------------------------------------------------------------------------------- -->
+
+
+          <!-- --------------------------------------------------------------------------------------------------- -->
 
 
           <li class="rmenu-icon-title"><strong>Light Dimmer</strong></li>
@@ -1111,7 +1128,7 @@
             <img id="drag123" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
               src="./icon/Icons80x80px/Numbers/9.png" alt="" data-draggable-class="switch" />
           </li>
-           
+
           <li class="rmenu-item-i">
             <img id="drag124" draggable="true" ontouchstart="drag(event)" ondragstart="drag(event)"
               src="./icon/Icons80x80px/Numbers/1B.png" alt="" data-draggable-class="switch" />
@@ -1151,7 +1168,7 @@
 
 
 
-          
+
 
 
         </ul>
@@ -1165,24 +1182,24 @@
         </svg>
         <span id="glassTitle"></span>
         <ul class="rmenu-item-round rmenu-glass">
-          <li>
-            <span class="rmenu-item-glass" title="black" style="background-color: black"></span>
+          <li class="rmenu-item-glass">
+            <span title="black" style="background-color: black"></span>
             <p>black</p>
           </li>
-          <li>
-            <span class="rmenu-item-glass" title="white" style="background-color: white"></span>
+          <li class="rmenu-item-glass">
+            <span title="white" style="background-color: white"></span>
             <p>white</p>
           </li>
-          <li>
-            <span class="rmenu-item-glass" title="grey" style="background-color: #a8a8a8"></span>
+          <li class="rmenu-item-glass">
+            <span title="grey" style="background-color: #a8a8a8"></span>
             <p>grey</p>
           </li>
-          <li>
-            <span class="rmenu-item-glass" title="RoyalBlue" style="background-color: #4b4c8c"></span>
+          <li class="rmenu-item-glass">
+            <span title="RoyalBlue" style="background-color: #4b4c8c"></span>
             <p>Royal Blue</p>
           </li>
-          <li>
-            <span class="rmenu-item-glass" title="Gold" style="background-color: #c4ac7c"></span>
+          <li class="rmenu-item-glass">
+            <span title="Gold" style="background-color: #c4ac7c"></span>
             <p>Gold</p>
           </li>
         </ul>
@@ -1194,27 +1211,27 @@
             d="M11 4a4 4 0 010 8H8a4.992 4.992 0 002-4 4.992 4.992 0 00-2-4h3zm-6 8a4 4 0 110-8 4 4 0 010 8zM0 8a5 5 0 005 5h6a5 5 0 000-10H5a5 5 0 00-5 5z"
             clip-rule="evenodd" />
         </svg>
-         <span>Frame</span>
+        <span>Frame</span>
         <ul class="rmenu-item-round rmenu-frame">
-          <li>
-            <span class="rmenu-item-frame" title="black" style="background-color: #000"></span>
+          <li class="rmenu-item-frame">
+            <span title="black" style="background-color: #000"></span>
             <p>black</p>
           </li>
-          <li>
-            <span class="rmenu-item-frame" title="grey" style="background-color: #5b5858"></span>
+          <li class="rmenu-item-frame">
+            <span title="grey" style="background-color: #5b5858"></span>
             <p>grey</p>
           </li>
-          <li>
-            <span class="rmenu-item-frame" title="Silver" style="background-color: #ddd"></span>
+          <li class="rmenu-item-frame">
+            <span title="Silver" style="background-color: #ddd"></span>
             <p>Silver</p>
           </li>
 
-          <li>
-            <span class="rmenu-item-frame" title="gold" style="background-color: #e2b144"></span>
+          <li class="rmenu-item-frame">
+            <span title="gold" style="background-color: #e2b144"></span>
             <p>gold</p>
           </li>
-          <li>
-            <span class="rmenu-item-frame" title="Rosegold" style="background-color: #B76E79"></span>
+          <li class="rmenu-item-frame">
+            <span title="Rosegold" style="background-color: #B76E79"></span>
             <p>Rose gold</p>
           </li>
           <li>
@@ -1247,6 +1264,11 @@
 <!-- added for printing the pdf purpose -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.js"></script> -->
 <script type="text/javascript">
+
+  document.querySelector("#alertBox").addEventListener("click", (e) => {
+    // Stop event bubbling
+    e.stopPropagation()
+  });
 
   $(document).on("keyup", ".verify-email", function () {
     var inputvalue = $(".verify-email").val();
@@ -1324,7 +1346,7 @@
       ssc.focus();
       ssc.print();
     }, function (error) {
-      alert("Something went wrong in Email sending process!\nEmail quota: 0!")
+      customAlert("Something went wrong in Email sending process!\nEmail quota: 0!")
       console.error("Email sending failed", error);
     });
   }
