@@ -445,8 +445,7 @@ body {
 .switch4-2,
 .switch6-2,
 .switch8-2,
-.switch4fan1-2,
-.switch6fan1-2 {
+.switch4fan1-2 {
   top: 68px;
 }
 
@@ -454,8 +453,7 @@ body {
 .switch4-1,
 .switch6-1,
 .switch8-1,
-.switch4fan1-1,
-.switch6fan1-1 {
+.switch4fan1-1 {
   top: 22px;
 }
 
@@ -543,43 +541,17 @@ body {
 .switch4-3,
 .switch6-3,
 .switch8-3,
-.switch4fan1-3,
-.switch6fan1-3 {
+.switch4fan1-3 {
   top: -38px;
 }
 
 .switch4-4,
 .switch6-4,
 .switch8-4,
-.switch4fan1-4,
-.switch6fan1-4 {
+.switch4fan1-4 {
   top: 8px;
 }
 
-.switch6fan1-1,
-.switch6fan1-2 {
-  left: 73px;
-}
-
-.switch6fan1-3,
-.switch6fan1-4 {
-  left: 152px;
-}
-
-.switch6fan1-5,
-.switch6fan1-6 {
-  left: 231px;
-}
-
-.switch6fan1-7 {
-  top: -115px;
-  left: 295px;
-}
-
-.switch6fan1-8 {
-  top: -210px;
-  left: 345px;
-}
 
 
 
@@ -769,14 +741,12 @@ body {
 }
 
 .switch6-5,
-.switch8-5,
-.switch6fan1-5 {
+.switch8-5 {
   top: -98px;
 }
 
 .switch6-6,
-.switch8-6,
-.switch6fan1-6 {
+.switch8-6 {
   top: -52px;
 }
 
@@ -789,10 +759,53 @@ body {
 }
 
 .switch6fan1 {
-  width: 600px;
+  display: grid;
+  align-items: center;
+  grid-template-areas:
+    "s1 s3 s5 . s8"
+    "s2 s4 s6 f1 s8";
+  /* width: 600px; */
+  width: 432px;
   height: 146px;
   position: relative;
 }
+
+.switch6fan1>* {
+  margin-inline: auto;
+}
+
+.switch6fan1-1 {
+  grid-area: s1;
+}
+
+.switch6fan1-2 {
+  grid-area: s2;
+}
+
+.switch6fan1-3 {
+  grid-area: s3;
+}
+
+.switch6fan1-4 {
+  grid-area: s4;
+}
+
+.switch6fan1-5 {
+  grid-area: s5;
+}
+
+.switch6fan1-6 {
+  grid-area: s6;
+}
+
+.switch6fan1-7 {
+  grid-area: f1;
+}
+
+.switch6fan1-8 {
+  grid-area: s8;
+}
+
 
 .switch8-1,
 .switch8-2 {
@@ -819,20 +832,16 @@ body {
   left: 43px;
 }
 
-/* .switch4fan1-1,
-.switch6fan1-1 {
+/* .switch4fan1-1  {
   top: 22px;
 }
-.switch4fan1-2,
-.switch6fan1-2 {
+.switch4fan1-2 {
   top: 68px;
 }
-.switch4fan1-3,
-.switch6fan1-3 {
+.switch4fan1-3 {
   top: -30px;
 }
-.switch4fan1-4,
-.switch6fan1-4 {
+.switch4fan1-4 {
   top: 15px;
 } */
 .switch4fan1-3,
@@ -1288,8 +1297,7 @@ body {
   .switch4-2,
   .switch6-2,
   .switch8-2,
-  .switch4fan1-2,
-  .switch6fan1-2 {
+  .switch4fan1-2 {
     top: 38px;
   }
 
@@ -1297,8 +1305,7 @@ body {
   .switch4-1,
   .switch6-1,
   .switch8-1,
-  .switch4fan1-1,
-  .switch6fan1-1 {
+  .switch4fan1-1 {
     top: 15px;
   }
 
@@ -1328,16 +1335,14 @@ body {
   .switch4-3,
   .switch6-3,
   .switch8-3,
-  .switch4fan1-3,
-  .switch6fan1-3 {
+  .switch4fan1-3 {
     top: -25px;
   }
 
   .switch4-4,
   .switch6-4,
   .switch8-4,
-  .switch4fan1-4,
-  .switch6fan1-4 {
+  .switch4fan1-4 {
     top: -1px;
   }
 
@@ -1377,14 +1382,12 @@ body {
   }
 
   .switch6-5,
-  .switch8-5,
-  .switch6fan1-5 {
+  .switch8-5 {
     top: -66px;
   }
 
   .switch6-6,
-  .switch8-6,
-  .switch6fan1-6 {
+  .switch8-6 {
     top: -42px;
   }
 
@@ -1414,31 +1417,6 @@ body {
 
   .switch8-8 {
     top: -80px;
-  }
-
-  .switch6fan1-1,
-  .switch6fan1-2 {
-    left: 43px;
-  }
-
-  .switch6fan1-3,
-  .switch6fan1-4 {
-    left: 107px;
-  }
-
-  .switch6fan1-5,
-  .switch6fan1-6 {
-    left: 176px;
-  }
-
-  .switch6fan1-7 {
-    top: -80px;
-    left: 225px;
-  }
-
-  .switch6fan1-8 {
-    top: -120px;
-    left: 255px;
   }
 
   .rmenu-item-i img {
@@ -1779,7 +1757,7 @@ hr {
 
 /* Rainbow Hover Effect with Glass Effect */
 .btn-grad-color:hover .front,
-.btn-grad-color.button .front{
+.btn-grad-color.button .front {
   background: linear-gradient(135deg,
       rgba(255, 0, 0, 0.9) 0%,
       rgba(255, 154, 0, 0.9) 14.3%,
@@ -2066,7 +2044,7 @@ hr {
 
 
 /* [data-droppable-class].hiden-border img  */
-#maindiv.glass [data-droppable-class].backgroundNone{
+#maindiv.glass [data-droppable-class].backgroundNone {
   padding: 2px;
   border: 2px solid #00a0e3;
   border-radius: 5px;

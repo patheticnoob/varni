@@ -1023,7 +1023,6 @@ $(document).ready(function () {
               customAlert("No Space availabe!");
             }
           } else {
-            // box2modAll(6, "switch6-fan1", "6 Switch + 1 fan");
             boxSize -= 6;
             Switch4fan2(n);
             customerRequirement["sub-element-" + n] = 6;
