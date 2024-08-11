@@ -32,15 +32,26 @@ $(document).ready(function () {
     allData.Panel = "Edge";
     $("#colorSec").removeClass("button");
     $("#buildbtn").addClass("button");
+
+    // set edge or class what is selected to set border in buttons conditionally
+    $('#maindiv').removeClass("glass");
+    $('#maindiv').addClass("edge");
+
   });
   $("#colorSec").click(function () {
     design = "color";
     $(".navbar").addClass("hide");
+    $("#watermark").removeClass("hide");
     $(".right-bar").removeClass("hide");
     $(".rmenu-item:first-child").removeClass("disabled");
     allData.Panel = "Color";
     $("#colorSec").addClass("button");
     $("#buildbtn").removeClass("button");
+
+    // set edge or class what is selected to set border in buttons conditionally
+    $('#maindiv').removeClass("edge");
+    $('#maindiv').addClass("glass");
+
   });
   $("#GetEmail").click(function () {
     allData.Quantity = "glass";
@@ -1963,7 +1974,7 @@ function scene4box2(bsize, mod12Name, boxlis, addcls, dataName) {
   $(".sub-element-" + n).html(
     '<div class="sceneController switch2-2 sw-ele-1" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="sceneController sw-ele-2" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="sceneController sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="sceneController sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div>'
   );
-  
+
   closetwo(n, 1, "closetwo");
   closetwo(n, 2, "closetwo");
   closetwo(n, 3, "closetwo");

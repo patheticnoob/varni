@@ -2065,8 +2065,8 @@ hr {
 }
 
 
-[data-droppable-class="fan"].backgroundNone,
-[data-droppable-class].hiden-border img {
+/* [data-droppable-class].hiden-border img  */
+#maindiv.glass [data-droppable-class].backgroundNone{
   padding: 2px;
   border: 2px solid #00a0e3;
   border-radius: 5px;
