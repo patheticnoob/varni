@@ -34,7 +34,7 @@ $(document).ready(function () {
     $("#buildbtn").addClass("button");
 
     // set edge or class what is selected to set border in buttons conditionally
-    $('#maindiv').removeClass("glass");
+    $('#maindiv').removeClass("color");
     $('#maindiv').addClass("edge");
 
   });
@@ -50,7 +50,7 @@ $(document).ready(function () {
 
     // set edge or class what is selected to set border in buttons conditionally
     $('#maindiv').removeClass("edge");
-    $('#maindiv').addClass("glass");
+    $('#maindiv').addClass("color");
 
   });
   $("#GetEmail").click(function () {
@@ -2370,6 +2370,12 @@ function Switch4fan2(n) {
     '<div class="fan switch4fan2-1 sw-ele-1 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div><div class="switch4fan2-2 sw-ele-2 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="switch2 switch4fan2-3 sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-4 sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-5 sw-ele-5" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-6 sw-ele-6" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch4fan2-7 sw-ele-7 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="fan switch4fan2-8 sw-ele-8 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div>'
   );
 
+  if (design === "color") {
+    designColorDefault(8);
+  } else {
+    designEdgeDefault(8);
+  }
+
   closetwo(n, 1, "closethree");
   closetwo(n, 2, "closetwo");
   closetwo(n, 3, "closetwo");
@@ -2390,6 +2396,12 @@ function switch4fan2box1(bsize, mod12Name, boxlis, addcls, dataName) {
   $(".sub-element-" + n).html(
     '<div class="fan switch4fan2-1 sw-ele-1 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div><div class="switch4fan2-2 sw-ele-2 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="switch2 switch4fan2-3 sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-4 sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-5 sw-ele-5" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-6 sw-ele-6" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch4fan2-7 sw-ele-7 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="fan switch4fan2-8 sw-ele-8 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div>'
   );
+
+  if (design === "color") {
+    designColorDefault(8);
+  } else {
+    designEdgeDefault(8);
+  }
 
   closetwo(n, 1, "closethree");
   closetwo(n, 2, "closetwo");
@@ -2415,6 +2427,12 @@ function switch4fan2box2(bsize, mod12Name, boxlis, addcls, dataName) {
   $(".sub-element-" + n).html(
     '<div class="fan switch4fan2-1 sw-ele-1 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div><div class="switch4fan2-2 sw-ele-2 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="switch2 switch4fan2-3 sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-4 sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-5 sw-ele-5" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan2-6 sw-ele-6" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch4fan2-7 sw-ele-7 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="fan switch4fan2-8 sw-ele-8 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div>'
   );
+
+  if (design === "color") {
+    designColorDefault(8);
+  } else {
+    designEdgeDefault(8);
+  }
 
   closetwo(n, 1, "closethree");
   closetwo(n, 2, "closetwo");
@@ -2521,7 +2539,11 @@ function Switch6fan2(n) {
   $(".sub-element-" + n).html(
     '<div class="fan switch6fan2-1 sw-ele-1 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div> <div class="switch6fan2-2 sw-ele-2 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="switch2 switch6fan2-3 sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-4 sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-5 sw-ele-5" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-6 sw-ele-6" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-7 sw-ele-7" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-8 sw-ele-8" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch6fan2-9 sw-ele-9 switch2ImageFan" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="fan switch6fan2-10 sw-ele-10 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div>'
   );
-
+  if (design === "color") {
+    designColorDefault(10);
+  } else {
+    designEdgeDefault(10);
+  }
   closetwo(n, 1, "closethree");
   closetwo(n, 2, "closetwo");
   closetwo(n, 3, "closetwo");
@@ -2544,7 +2566,11 @@ function switch6fan2box1(bsize, mod12Name, boxlis, addcls, dataName) {
   $(".sub-element-" + n).html(
     '<div class="fan switch6fan2-1 sw-ele-1 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div> <div class="switch2 switch6fan2-2 sw-ele-2" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="switch2 switch6fan2-3 sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-4 sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-5 sw-ele-5" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-6 sw-ele-6" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-7 sw-ele-7" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-8 sw-ele-8" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-9 sw-ele-9" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="fan switch6fan2-10 sw-ele-10 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div>'
   );
-
+  if (design === "color") {
+    designColorDefault(10);
+  } else {
+    designEdgeDefault(10);
+  }
   closetwo(n, 1, "closethree");
   closetwo(n, 2, "closetwo");
   closetwo(n, 3, "closetwo");
@@ -2571,7 +2597,11 @@ function switch6fan2box2(bsize, mod12Name, boxlis, addcls, dataName) {
   $(".sub-element-" + n).html(
     '<div class="fan switch6fan2-1 sw-ele-1 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div> <div class="switch2 switch6fan2-2 sw-ele-2" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="switch2 switch6fan2-3 sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-4 sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-5 sw-ele-5" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch6fan2-6 sw-ele-6" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-7 sw-ele-7" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-8 sw-ele-8" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6fan2-9 sw-ele-9" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="fan"></div><div class="fan switch6fan2-10 sw-ele-10 hiden-border switch2ImageDimmer" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer"></div>'
   );
-
+  if (design === "color") {
+    designColorDefault(10);
+  } else {
+    designEdgeDefault(10);
+  }
   closetwo(n, 1, "closethree");
   closetwo(n, 2, "closetwo");
   closetwo(n, 3, "closetwo");
