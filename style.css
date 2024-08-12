@@ -1821,7 +1821,8 @@ hr {
   align-items: center;
   grid-template-areas:
     "s1 . s2 s4 s6 . s8"
-    "s1 f1 s3 s5 s7 f2 s8";
+    "s1 f1 . . . f2 s8"
+    "s1 . s3 s5 s7 . s8";
   width: 432px;
   height: 146px;
   position: relative;
