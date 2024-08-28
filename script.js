@@ -1589,6 +1589,7 @@ $(document).ready(function () {
     $(".module").removeClass("module-fgold");
     $(".module").removeClass("module-fgray");
     $(".module").removeClass("module-fRosegold");
+    $(".module").removeClass("module-fChrome");
     $(".module").removeClass("module-fsilver");
     if ($(this).attr('title') == "black") {
       $(".module").addClass("module-fsblack");
@@ -1605,6 +1606,10 @@ $(document).ready(function () {
     if ($(this).attr('title') == "Rosegold") {
       $(".module").addClass("module-fRosegold");
       allData.frame = "Rosegold";
+    }
+    if ($(this).attr('title') == "chrome") {
+      $(".module").addClass("module-fChrome");
+      allData.frame = "Chrome";
     }
     if ($(this).attr('title') == "Silver") {
       $(".module").addClass("module-fsilver");
