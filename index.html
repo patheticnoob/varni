@@ -1410,113 +1410,169 @@
     return plainTextTable;
   }
 
-
   function takePdf() {
     // capture email and add in the PDF
     const additional_message = document.querySelector("#additional_msg").value;
-    // const ifde = document.getElementById("iframe-download");
-    const iframeDocsFromSS = JSON.parse(sessionStorage.getItem("BOARD")) || [];
+    const ifde = document.getElementById("iframe-download");
+    const iframedocuments = ifde.contentDocument;
+    iframedocuments.getElementById("emailed-by").textContent = document.querySelector("#email-verify").value;
+    iframedocuments.getElementById("additional_message").textContent = additional_message;
 
-    // Create a new iframe element
-    const newIframe = document.createElement('iframe');
-    newIframe.classList.add('hide');
-    document.body.appendChild(newIframe);
-
-    // Access the new iframe's document and write the stored HTML content into it
-    const newDoc = newIframe.contentDocument || newIframe.contentWindow.document;
-    newDoc.open();
-    iframeDocsFromSS.forEach(content => {
-      newDoc.write(content);
-    });
-    newDoc.close();
-
-    // Wait for the iframe content to load before manipulating it
-    newIframe.onload = () => {
-
-      const iframedocuments = newIframe.contentDocument;
-
-      // const iframedocuments = ifde.contentDocument;
-      //============================ I need to update the PDF and create the email message while storing it in SS ============================//
-      iframedocuments.getElementById("emailed-by").textContent = document.querySelector("#email-verify").value;
-      iframedocuments.getElementById("additional_message").textContent = additional_message;
-
-      const emailContent = {
-        to_email: `${document.querySelector("#email-verify").value}, varnidigital@gmail.com`,
-        subject: "SUBJECT LINE",
-        message: `${convertTableToPlainText(iframedocuments.getElementById("tableData"))}
-            \n
-            Additional message: ${additional_message}
-            \n
-            Content downloaded by : ${document.querySelector("#email-verify").value}
-            \n`,
-      }
-      console.table(emailContent);
-
-      try {
-        const ssc = newIframe.contentWindow;
-        ssc.focus();
-        ssc.print();
-      } catch (error) {
-        console.error('❌ error:', error);
-      }
+    const emailContent = {
+      to_email: `${document.querySelector("#email-verify").value}, varnidigital@gmail.com`,
+      subject: "SUBJECT LINE",
+      message: `${convertTableToPlainText(iframedocuments.getElementById("tableData"))}
+      \n
+      Additional message: ${additional_message}
+      \n
+      Content downloaded by : ${document.querySelector("#email-verify").value}
+      \n`,
     }
 
     // Send the email
     // From varnidigital@design.yantramayaa.com
-    // emailjs.send("service_vbg26pu", "template_lotyhl7", emailContent, "uzcffqAVsSSzCd6Iv").then(function (response) {
-    // From dhrumitpatel74@gmail.com
-    // emailjs.send("service_bejiryc", "template_2cmd59g", emailContent, "w96u_0SU7qDM33pJV").then(function (response) {
-    // const ssc = ifde.contentWindow;
-    // ssc.focus();
-    // ssc.print();
-    // }, function (error) {
-    // customAlert("Something went wrong in Email sending process!\nEmail quota: 0!")
-    // console.error("Email sending failed", error);
-    // });
+    emailjs.send("service_vbg26pu", "template_lotyhl7", emailContent, "uzcffqAVsSSzCd6Iv").then(function (response) {
+      const ssc = ifde.contentWindow;
+      ssc.focus();
+      ssc.print();
+    }, function (error) {
+      customAlert("Something went wrong in Email sending process!\nEmail quota: 0!")
+      console.error("Email sending failed", error);
+    });
   }
+
+
+  // function takePdf() {
+  //   // capture email and add in the PDF
+  //   const additional_message = document.querySelector("#additional_msg").value;
+  //   // const ifde = document.getElementById("iframe-download");
+  //   const iframeDocsFromSS = JSON.parse(sessionStorage.getItem("BOARD")) || [];
+
+  //   // Create a new iframe element
+  //   const newIframe = document.createElement('iframe');
+  //   newIframe.classList.add('hide');
+  //   document.body.appendChild(newIframe);
+
+  //   // Access the new iframe's document and write the stored HTML content into it
+  //   const newDoc = newIframe.contentDocument || newIframe.contentWindow.document;
+  //   newDoc.open();
+  //   iframeDocsFromSS.forEach(content => {
+  //     newDoc.write(content);
+  //   });
+  //   newDoc.close();
+
+  //   // Wait for the iframe content to load before manipulating it
+  //   newIframe.onload = () => {
+
+  //     const iframedocuments = newIframe.contentDocument;
+
+  //     // const iframedocuments = ifde.contentDocument;
+  //     //============================ I need to update the PDF and create the email message while storing it in SS ============================//
+  //     iframedocuments.getElementById("emailed-by").textContent = document.querySelector("#email-verify").value;
+  //     iframedocuments.getElementById("additional_message").textContent = additional_message;
+
+  //     const emailContent = {
+  //       to_email: `${document.querySelector("#email-verify").value}, varnidigital@gmail.com`,
+  //       subject: "SUBJECT LINE",
+  //       message: `${convertTableToPlainText(iframedocuments.getElementById("tableData"))}
+  //           \n
+  //           Additional message: ${additional_message}
+  //           \n
+  //           Content downloaded by : ${document.querySelector("#email-verify").value}
+  //           \n`,
+  //     }
+  //     console.table(emailContent);
+
+  //     try {
+  //       const ssc = newIframe.contentWindow;
+  //       ssc.focus();
+  //       ssc.print();
+  //     } catch (error) {
+  //       console.error('❌ error:', error);
+  //     }
+  //   }
+
+  //   // Send the email
+  //   // From varnidigital@design.yantramayaa.com
+  //   // emailjs.send("service_vbg26pu", "template_lotyhl7", emailContent, "uzcffqAVsSSzCd6Iv").then(function (response) {
+  //   // From dhrumitpatel74@gmail.com
+  //   // emailjs.send("service_bejiryc", "template_2cmd59g", emailContent, "w96u_0SU7qDM33pJV").then(function (response) {
+  //   // const ssc = ifde.contentWindow;
+  //   // ssc.focus();
+  //   // ssc.print();
+  //   // }, function (error) {
+  //   // customAlert("Something went wrong in Email sending process!\nEmail quota: 0!")
+  //   // console.error("Email sending failed", error);
+  //   // });
+  // }
 
   function change_text(valueText) {
     document.getElementById("glassTitle").innerHTML = valueText;
   }
 
   function takeScreeshot() {
-    const ele = document.querySelector(".module").cloneNode(true);
-    // html2canvas(ele).then((canvas) => {
-    const ifde = document.getElementById("iframe-download");
-    const iframedocuments = ifde.contentDocument;
-    const tableBodye = iframedocuments.getElementById("container-image");
+    const ele = document.querySelector(".module");
+    html2canvas(ele).then((canvas) => {
+      const ifde = document.getElementById("iframe-download");
+      const iframedocuments = ifde.contentDocument;
+      const tableBodye = iframedocuments.getElementById("container-image");
 
-    while (tableBodye.firstChild) {
-      tableBodye.removeChild(tableBodye.firstChild);
-    }
+      while (tableBodye.firstChild) {
+        tableBodye.removeChild(tableBodye.firstChild);
+      }
+      const moduleBlack = document.querySelector(".module");
+      const moduleBlackWidth = moduleBlack.offsetWidth;
+      const moduleBlackHeight = moduleBlack.offsetHeight;
 
-    // const moduleBlack = document.querySelector(".module");
-    // const moduleBlackWidth = moduleBlack.offsetWidth;
-    // const moduleBlackHeight = moduleBlack.offsetHeight;
+      const aspectRatio = moduleBlackWidth / moduleBlackHeight;
+      canvas.style.width = moduleBlackWidth + "px";
+      canvas.style.height = moduleBlackHeight + "px";
+      if (aspectRatio > 1.5) {
+        canvas.style.scale = 0.9;
+      }
+      tableBodye.append(canvas);
 
-    // const aspectRatio = moduleBlackWidth / moduleBlackHeight;
-    // canvas.style.width = moduleBlackWidth + "px";
-    // canvas.style.height = moduleBlackHeight + "px";
-    // if (aspectRatio > 1.5) {
-    //   canvas.style.scale = 0.9;
-    // }
-    tableBodye.append(ele);
-
-
-    // store the iframe content in Session storage
-    // Each iframe document have size of 154 bytes | 0.000154 MB | maximum we can store 5-10 MB
-    // const iframeDoc = document.getElementById("iframe-download");
-    // console.log('iframeDoc:', iframeDoc.outerHTML)
-
-    // Assuming the iframe content is from the same origin
-    const iframe = document.getElementById('iframe-download');
-    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-
-    // Serialize the inner HTML of the iframe document
-    const iframeInnerHTML = iframeDoc.documentElement.innerHTML;
-    saveToSS({ key: "BOARD", iframeContent: iframeInnerHTML });
-    // });
+    });
   }
+
+  // function takeScreeshot() {
+  //   const ele = document.querySelector(".module").cloneNode(true);
+  //   // html2canvas(ele).then((canvas) => {
+  //   const ifde = document.getElementById("iframe-download");
+  //   const iframedocuments = ifde.contentDocument;
+  //   const tableBodye = iframedocuments.getElementById("container-image");
+
+  //   while (tableBodye.firstChild) {
+  //     tableBodye.removeChild(tableBodye.firstChild);
+  //   }
+
+  //   // const moduleBlack = document.querySelector(".module");
+  //   // const moduleBlackWidth = moduleBlack.offsetWidth;
+  //   // const moduleBlackHeight = moduleBlack.offsetHeight;
+
+  //   // const aspectRatio = moduleBlackWidth / moduleBlackHeight;
+  //   // canvas.style.width = moduleBlackWidth + "px";
+  //   // canvas.style.height = moduleBlackHeight + "px";
+  //   // if (aspectRatio > 1.5) {
+  //   //   canvas.style.scale = 0.9;
+  //   // }
+  //   tableBodye.append(ele);
+
+
+  //   // store the iframe content in Session storage
+  //   // Each iframe document have size of 154 bytes | 0.000154 MB | maximum we can store 5-10 MB
+  //   // const iframeDoc = document.getElementById("iframe-download");
+  //   // console.log('iframeDoc:', iframeDoc.outerHTML)
+
+  //   // Assuming the iframe content is from the same origin
+  //   const iframe = document.getElementById('iframe-download');
+  //   const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+  //   // Serialize the inner HTML of the iframe document
+  //   const iframeInnerHTML = iframeDoc.documentElement.innerHTML;
+  //   saveToSS({ key: "BOARD", iframeContent: iframeInnerHTML });
+  //   // });
+  // }
   $(".tp-close").click(function () {
     $(".tp-close").removeClass("show");
     $(".rmenu-item-list").removeClass("show");

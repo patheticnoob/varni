@@ -974,7 +974,7 @@ $(document).ready(function () {
       }
 
       if ($(this).attr("title") == "switch10") {
-        if (boxSize >= 8) {
+        if (boxSize == 8) {
           if (mod == 12) {
             if (boxSize > 8 && 8 >= box1Capacity + 8) {
               // box1mod12(6, ".sub-module-th", box1lis, "switch8", "8 Switch");
@@ -995,7 +995,7 @@ $(document).ready(function () {
             obj++;
           }
         } else {
-          customAlert("Adding 6 Module item is not possible!");
+          customAlert("Adding 8 Module item is not possible!");
         }
       }
 
@@ -1610,7 +1610,7 @@ $(document).ready(function () {
     }
     if ($(this).attr('title') == "Rosegold") {
       $(".module").addClass("module-fRosegold");
-      allData.frame = "Rosegold";
+      allData.frame = "Rose gold";
     }
     if ($(this).attr('title') == "chrome") {
       $(".module").addClass("module-fChrome");
