@@ -995,7 +995,7 @@ $(document).ready(function () {
             obj++;
           }
         } else {
-          customAlert("Adding 8 Module item is not possible!");
+          customAlert("10 Swtich only supports in 8 module!");
         }
       }
 
