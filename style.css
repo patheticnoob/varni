@@ -1097,6 +1097,10 @@ body {
   background-color: #c4ac7c;
 }
 
+.module-LightGray {
+  background-color: #D3D3D3;
+}
+
 .module-fsblack {
   border: 5px solid #000;
 }
