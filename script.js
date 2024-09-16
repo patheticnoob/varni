@@ -896,7 +896,7 @@ $(document).ready(function () {
                 4,
                 ".sub-module-th",
                 box1lis,
-                "switch4",
+                "switch4fan1",
                 "4 Switch + 1 fan"
               );
             } else if (6 >= box2Capacity + 4) {
@@ -904,7 +904,7 @@ $(document).ready(function () {
                 4,
                 ".sub-module-fi",
                 box2lis,
-                "switch4",
+                "switch4fan1",
                 "4 Switch + 1 fan"
               );
             } else {
@@ -1559,7 +1559,7 @@ $(document).ready(function () {
   $(".rmenu-item-glass").click(function () {
     $(".module").removeClass("module-black");
     $(".module").removeClass("module-white");
-    $(".module").removeClass("module-grey");
+    $(".module").removeClass("module-gray");
     $(".module").removeClass("module-RoyalBlue");
     $(".module").removeClass("module-Gold");
     $(".module").removeClass("module-LightGray");
@@ -1835,7 +1835,7 @@ function dimme2(bsize, addcls, dataName) {
   $(".sub-module").append(node);
   node.classList.add(addcls);
   $(".sub-element-" + n).html(
-    '<div class="dimme2Incr dimme2box1-1"></div><div class="dimme2Incr dimme2box1-2"></div><div class="dimme2Decr dimme2box1-3"></div><div class="dimme2Decr dimme2box1-4"></div>'
+    '<div class="dimmeIncr dimme2box1-1"></div><div class="dimmeIncr dimme2box1-2"></div><div class="dimmeDecr dimme2box1-3"></div><div class="dimmeDecr dimme2box1-4"></div>'
   );
 
   closebtn(n);
@@ -1852,7 +1852,7 @@ function dimme2box1(bsize, mod12Name, boxlis, addcls, dataName) {
   $(mod12Name).append(node);
   node.classList.add(addcls);
   $(".sub-element-" + n).html(
-    '<div class="dimme2Incr dimme2box1-1"></div><div class="dimme2Incr dimme2box1-2"></div><div class="dimme2Decr dimme2box1-3"></div><div class="dimme2Decr dimme2box1-4"></div>'
+    '<div class="dimmeIncr dimme2box1-1"></div><div class="dimmeIncr dimme2box1-2"></div><div class="dimmeDecr dimme2box1-3"></div><div class="dimmeDecr dimme2box1-4"></div>'
   );
 
   closebtn(n);
@@ -1869,7 +1869,7 @@ function dimme2box2(bsize, mod12Name, boxlis, addcls, dataName) {
   $(mod12Name).append(node);
   node.classList.add(addcls);
   $(".sub-element-" + n).html(
-    '<div class="dimme2Incr dimme2box1-1"></div><div class="dimme2Incr dimme2box1-2"></div><div class="dimme2Decr dimme2box1-3"></div><div class="dimme2Decr dimme2box1-4"></div>'
+    '<div class="dimmeIncr dimme2box1-1"></div><div class="dimmeIncr dimme2box1-2"></div><div class="dimmeDecr dimme2box1-3"></div><div class="dimmeDecr dimme2box1-4"></div>'
   );
 
   closebtn(n);
@@ -2298,7 +2298,7 @@ function Switch4fan1(n) {
   const node = document.createElement("div");
   node.classList.add("sub-element-" + n);
   $(".sub-module").append(node);
-  node.classList.add("switch4");
+  node.classList.add("switch4fan1");
   $(".sub-element-" + n).html(
     '<div class="switch2 switch4fan1-1 sw-ele-1" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan1-2 sw-ele-2" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan1-3 sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan1-4 sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="switch"></div><div class="switch2 switch4fan1-5 sw-ele-5" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="fan"></div><div class="fan switch4fan1-6 sw-ele-6 hiden-border" ondrop="drop(event)"ondragover="allowDrop(event)" data-droppable-class="dimmer" ></div>'
   );

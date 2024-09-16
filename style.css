@@ -519,6 +519,12 @@ body {
   height: 35px;
 }
 
+.switch4fan1{
+  height: 146px;
+  width: 270px;
+  position: relative;
+}
+
 .switch4 {
   height: 146px;
   /* height: 22.52vh; */
@@ -627,7 +633,7 @@ body {
   position: relative;
 }
 
-.dimme2Incr {
+.dimmeIncr {
   width: 30px;
   height: 30px;
   background: url(./icon/m2/increase.png);
@@ -638,7 +644,7 @@ body {
   position: relative;
 }
 
-.dimme2Decr {
+.dimmeDecr {
   width: 30px;
   height: 30px;
   background: url(./icon/m2/decrease.png);
