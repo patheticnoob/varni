@@ -107,13 +107,23 @@ body {
   display: block;
 }
 
+.rmenu-item-list{
+  height: fit-content;
+}
+
+.rmenu-item-list.rmenu-icon,
+.accessories-rmenu{
+  height: 65vh;
+}
+
+
 .rmenu-item-list,
 .accessories-rmenu {
   display: none;
   text-align: center;
   /* height: 400px; */
-  min-height: fit-content;
-  max-height: 65vh;
+  /* min-height: fit-content;
+  max-height: 65vh; */
   /* width: 250px; */
   width: 20vw;
   position: fixed;
