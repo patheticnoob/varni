@@ -1618,7 +1618,7 @@ $(document).ready(function () {
     }
     if ($(this).attr('title') == "Silver") {
       $(".module").addClass("module-fsilver");
-      allData.glass = "Silver";
+      allData.frame = "Silver";
     }
   });
 
