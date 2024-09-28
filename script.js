@@ -928,9 +928,9 @@ $(document).ready(function () {
           if (mod == 12) {
             if (boxSize > 6 && 6 >= box1Capacity + 4) {
               // box1mod12(4, ".sub-module-th", box1lis, "Switch6", "6 Switch");
-              switch6box1(4, ".sub-module-th", box1lis, "switch4", "6 Switch");
+              switch6box1(4, ".sub-module-th", box1lis, "switch6", "6 Switch");
             } else if (6 >= box2Capacity + 4) {
-              switch6box2(4, ".sub-module-fi", box2lis, "switch4", "6 Switch");
+              switch6box2(4, ".sub-module-fi", box2lis, "switch6", "6 Switch");
             } else {
               customAlert("No Space availabe!");
             }
