@@ -1329,7 +1329,7 @@
 </body>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="./html2canvas.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script> -->
 <!-- <script src="./fileSave.js"></script> -->
@@ -1416,14 +1416,19 @@
     const ifde = document.getElementById("iframe-download");
     const iframedocuments = ifde.contentDocument;
     iframedocuments.getElementById("emailed-by").textContent = document.querySelector("#email-verify").value;
-    iframedocuments.getElementById("additional_message").textContent = additional_message;
+    if (additional_message) {
+      iframedocuments.getElementById("msg").style.display = "block";
+      iframedocuments.getElementById("additional_message").textContent = additional_message;
+    } else {
+      iframedocuments.getElementById("msg").style.display = "none";
+    }
 
     const emailContent = {
       to_email: `${document.querySelector("#email-verify").value}, varnidigital@gmail.com`,
       subject: "SUBJECT LINE",
       message: `${convertTableToPlainText(iframedocuments.getElementById("tableData"))}
       \n
-      Additional message: ${additional_message}
+      ${additional_message && "Additional message: " + additional_message}
       \n
       Content downloaded by : ${document.querySelector("#email-verify").value}
       \n`,
@@ -1529,6 +1534,9 @@
       canvas.style.height = moduleBlackHeight + "px";
       if (aspectRatio > 1.5) {
         canvas.style.scale = 0.9;
+      } else if (allData.Module == 12) {
+        canvas.style.scale = 0.8;
+        tableBodye.style.margin = "-70px 0 -40px 0px";
       }
       tableBodye.append(canvas);
 
