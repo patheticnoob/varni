@@ -2064,7 +2064,7 @@ function switch6(n) {
   const node = document.createElement("div");
   node.classList.add("sub-element-" + n);
   $(".sub-module").append(node);
-  node.classList.add("switch4");
+  node.classList.add("switch6");
   $(".sub-element-" + n).html(
     '<div class="switch2 switch6-1 sw-ele-1" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6-2 sw-ele-2" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6-3 sw-ele-3" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6-4 sw-ele-4" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div></div><div class="switch2 switch6-5 sw-ele-5" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div><div class="switch2 switch6-6 sw-ele-6" ondrop="drop(event)"ondragover="allowDrop(event)"data-droppable-class="switch"></div>'
   );
